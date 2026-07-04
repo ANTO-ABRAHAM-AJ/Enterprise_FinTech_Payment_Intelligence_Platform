@@ -1,0 +1,12 @@
+# Ignore large datasets
+01_Data_Engineering/01_Dataset/paysim_raw.csv
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# VS Code settings
+.vscode/
