@@ -24,7 +24,7 @@ The primary objectives of this project are to:
 
 # In Scope
 
-The following components are included in this project.
+The following components are included in Version 1 of this project.
 
 ## 1. Business Understanding
 
@@ -109,17 +109,14 @@ Interactive Power BI dashboards including:
 
 # Out of Scope
 
-The following capabilities are intentionally excluded from this project.
+The following capabilities are intentionally excluded from **Version 1** of this project:
 
-- Real-time payment processing
 - Live banking integrations
 - Production payment gateway implementation
-- Cloud infrastructure deployment
-- Mobile application development
 - Production API deployment
-- Real-time streaming analytics
-- Production fraud detection engine
+- Cloud-native deployment
 - Enterprise-scale distributed architecture
+- Production fraud detection engine
 
 ---
 
@@ -149,7 +146,7 @@ The project is subject to the following constraints:
 
 # Expected Deliverables
 
-The project will produce the following deliverables:
+The project will produce the following deliverables.
 
 ## Business Documentation
 
@@ -228,8 +225,24 @@ The Enterprise FinTech Payment Intelligence Platform aims to deliver the followi
 
 ---
 
+# Future Scope (Version 2)
+
+Future enhancements planned after completing Version 1 include:
+
+- Real-Time Fraud Monitoring Simulation
+- Simulated live transaction streaming using Python
+- Live fraud risk scoring dashboard
+- Automated fraud alert generation
+- Intelligent payment routing recommendations
+- Apache Kafka-based streaming analytics
+- Cloud-native deployment
+- REST API integration
+- Advanced machine learning models for fraud detection
+
+---
+
 # Conclusion
 
 This project provides a comprehensive simulation of how enterprise payment organizations leverage analytics to improve payment reliability, strengthen fraud prevention, monitor operational performance, and support strategic business decisions.
 
-By integrating data engineering, analytics, machine learning, and business intelligence into a single workflow, the platform demonstrates an end-to-end approach to solving real-world payment challenges while showcasing industry-relevant analytical skills.
+By integrating data engineering, analytics, machine learning, and business intelligence into a single workflow, the platform demonstrates an end-to-end approach to solving real-world payment challenges while showcasing industry-relevant analytical, technical, and business skills.
