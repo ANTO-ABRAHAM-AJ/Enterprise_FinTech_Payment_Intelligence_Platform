@@ -32,7 +32,8 @@ GO
 -- Step 2 : Create Index on TransactionTypeKey
 --------------------------------------------------------------
 
-IF NOT EXISTS (
+IF NOT EXISTS
+(
     SELECT *
     FROM sys.indexes
     WHERE name = 'IX_Fact_TransactionType'
@@ -47,7 +48,8 @@ GO
 -- Step 3 : Create Index on FraudKey
 --------------------------------------------------------------
 
-IF NOT EXISTS (
+IF NOT EXISTS
+(
     SELECT *
     FROM sys.indexes
     WHERE name = 'IX_Fact_Fraud'
@@ -62,7 +64,8 @@ GO
 -- Step 4 : Create Index on Step
 --------------------------------------------------------------
 
-IF NOT EXISTS (
+IF NOT EXISTS
+(
     SELECT *
     FROM sys.indexes
     WHERE name = 'IX_Fact_Step'
@@ -77,7 +80,8 @@ GO
 -- Step 5 : Create Index on Amount
 --------------------------------------------------------------
 
-IF NOT EXISTS (
+IF NOT EXISTS
+(
     SELECT *
     FROM sys.indexes
     WHERE name = 'IX_Fact_Amount'
@@ -108,20 +112,36 @@ SET STATISTICS IO ON;
 SET STATISTICS TIME ON;
 GO
 
-SELECT *
+--------------------------------------------------------------
+-- Query 1 : Search by Transaction Type
+--------------------------------------------------------------
+
+SELECT TOP (100) *
 FROM dbo.Fact_PaymentTransactions
 WHERE TransactionTypeKey = 4;
 GO
 
-SELECT *
+--------------------------------------------------------------
+-- Query 2 : Search by Fraud
+--------------------------------------------------------------
+
+SELECT TOP (100) *
 FROM dbo.Fact_PaymentTransactions
 WHERE FraudKey = 2;
 GO
 
-SELECT *
+--------------------------------------------------------------
+-- Query 3 : High Value Transactions
+--------------------------------------------------------------
+
+SELECT TOP (100) *
 FROM dbo.Fact_PaymentTransactions
 WHERE Amount > 100000;
 GO
+
+--------------------------------------------------------------
+-- Disable Statistics
+--------------------------------------------------------------
 
 SET STATISTICS IO OFF;
 SET STATISTICS TIME OFF;
