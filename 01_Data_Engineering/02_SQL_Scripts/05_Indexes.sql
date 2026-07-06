@@ -1,148 +1,97 @@
 /*
 ==============================================================
 Enterprise FinTech Payment Intelligence Platform
-05_Indexes.sql
-==============================================================
-
-Author  : Anto Abraham AJ
-Database: Enterprise_FinTech_Payment_Intelligence
+File: 05_Indexes.sql
 
 Purpose:
-Create indexes on the Fact table to improve query performance.
-
+Create Non-Clustered Indexes on the Fact_PaymentTransactions 
+table to dramatically reduce query execution time for analytics.
 ==============================================================
 */
 
 USE Enterprise_FinTech_Payment_Intelligence;
 GO
 
---------------------------------------------------------------
--- Step 1 : View Existing Indexes
---------------------------------------------------------------
+PRINT '--- Beginning Index Creation ---';
 
-SELECT
-    name AS IndexName,
-    type_desc,
-    OBJECT_NAME(object_id) AS TableName
-FROM sys.indexes
-WHERE OBJECT_NAME(object_id) = 'Fact_PaymentTransactions';
+--------------------------------------------------------------
+-- 1. Index: TimeKey (Crucial for Time-Series Analysis)
+--------------------------------------------------------------
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE name = 'IX_Fact_TimeKey' AND object_id = OBJECT_ID('dbo.Fact_PaymentTransactions'))
+BEGIN
+    CREATE NONCLUSTERED INDEX IX_Fact_TimeKey 
+    ON dbo.Fact_PaymentTransactions(TimeKey);
+    PRINT 'Created Index: IX_Fact_TimeKey';
+END
 GO
 
 --------------------------------------------------------------
--- Step 2 : Create Index on TransactionTypeKey
+-- 2. Index: TransactionTypeKey (Crucial for Segmenting Risk)
 --------------------------------------------------------------
-
-IF NOT EXISTS
-(
-    SELECT *
-    FROM sys.indexes
-    WHERE name = 'IX_Fact_TransactionType'
-)
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE name = 'IX_Fact_TransactionTypeKey' AND object_id = OBJECT_ID('dbo.Fact_PaymentTransactions'))
 BEGIN
-    CREATE NONCLUSTERED INDEX IX_Fact_TransactionType
+    CREATE NONCLUSTERED INDEX IX_Fact_TransactionTypeKey 
     ON dbo.Fact_PaymentTransactions(TransactionTypeKey);
+    PRINT 'Created Index: IX_Fact_TransactionTypeKey';
 END
 GO
 
 --------------------------------------------------------------
--- Step 3 : Create Index on FraudKey
+-- 3. Index: FraudKey (Crucial for Fraud Filtering)
 --------------------------------------------------------------
-
-IF NOT EXISTS
-(
-    SELECT *
-    FROM sys.indexes
-    WHERE name = 'IX_Fact_Fraud'
-)
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE name = 'IX_Fact_FraudKey' AND object_id = OBJECT_ID('dbo.Fact_PaymentTransactions'))
 BEGIN
-    CREATE NONCLUSTERED INDEX IX_Fact_Fraud
+    CREATE NONCLUSTERED INDEX IX_Fact_FraudKey 
     ON dbo.Fact_PaymentTransactions(FraudKey);
+    PRINT 'Created Index: IX_Fact_FraudKey';
 END
 GO
 
 --------------------------------------------------------------
--- Step 4 : Create Index on Step
+-- 4. Index: SourceAccount (Optimizes Sender Behavioral Analytics)
 --------------------------------------------------------------
-
-IF NOT EXISTS
-(
-    SELECT *
-    FROM sys.indexes
-    WHERE name = 'IX_Fact_Step'
-)
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE name = 'IX_Fact_SourceAccount' AND object_id = OBJECT_ID('dbo.Fact_PaymentTransactions'))
 BEGIN
-    CREATE NONCLUSTERED INDEX IX_Fact_Step
-    ON dbo.Fact_PaymentTransactions(Step);
+    CREATE NONCLUSTERED INDEX IX_Fact_SourceAccount 
+    ON dbo.Fact_PaymentTransactions(SourceAccount);
+    PRINT 'Created Index: IX_Fact_SourceAccount';
 END
 GO
 
 --------------------------------------------------------------
--- Step 5 : Create Index on Amount
+-- 5. Index: DestinationAccount (Optimizes Receiver Risk Profiling)
 --------------------------------------------------------------
-
-IF NOT EXISTS
-(
-    SELECT *
-    FROM sys.indexes
-    WHERE name = 'IX_Fact_Amount'
-)
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE name = 'IX_Fact_DestinationAccount' AND object_id = OBJECT_ID('dbo.Fact_PaymentTransactions'))
 BEGIN
-    CREATE NONCLUSTERED INDEX IX_Fact_Amount
+    CREATE NONCLUSTERED INDEX IX_Fact_DestinationAccount 
+    ON dbo.Fact_PaymentTransactions(DestinationAccount);
+    PRINT 'Created Index: IX_Fact_DestinationAccount';
+END
+GO
+
+--------------------------------------------------------------
+-- 6. Index: Amount (Optimizes High-Value Transaction Sweeps)
+--------------------------------------------------------------
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE name = 'IX_Fact_Amount' AND object_id = OBJECT_ID('dbo.Fact_PaymentTransactions'))
+BEGIN
+    CREATE NONCLUSTERED INDEX IX_Fact_Amount 
     ON dbo.Fact_PaymentTransactions(Amount);
+    PRINT 'Created Index: IX_Fact_Amount';
 END
 GO
 
---------------------------------------------------------------
--- Step 6 : Verify All Indexes
---------------------------------------------------------------
+PRINT '--- All Indexes Created Successfully ---';
+GO
+
+/*==============================================================
+Step 7 : Verify Created Indexes
+==============================================================*/
 
 SELECT
-    name AS IndexName,
-    type_desc,
-    OBJECT_NAME(object_id) AS TableName
-FROM sys.indexes
-WHERE OBJECT_NAME(object_id) = 'Fact_PaymentTransactions';
-GO
-
---------------------------------------------------------------
--- Step 7 : Test Query Performance
---------------------------------------------------------------
-
-SET STATISTICS IO ON;
-SET STATISTICS TIME ON;
-GO
-
---------------------------------------------------------------
--- Query 1 : Search by Transaction Type
---------------------------------------------------------------
-
-SELECT TOP (100) *
-FROM dbo.Fact_PaymentTransactions
-WHERE TransactionTypeKey = 4;
-GO
-
---------------------------------------------------------------
--- Query 2 : Search by Fraud
---------------------------------------------------------------
-
-SELECT TOP (100) *
-FROM dbo.Fact_PaymentTransactions
-WHERE FraudKey = 2;
-GO
-
---------------------------------------------------------------
--- Query 3 : High Value Transactions
---------------------------------------------------------------
-
-SELECT TOP (100) *
-FROM dbo.Fact_PaymentTransactions
-WHERE Amount > 100000;
-GO
-
---------------------------------------------------------------
--- Disable Statistics
---------------------------------------------------------------
-
-SET STATISTICS IO OFF;
-SET STATISTICS TIME OFF;
+    i.name AS IndexName,
+    i.type_desc AS IndexType,
+    OBJECT_NAME(i.object_id) AS TableName
+FROM sys.indexes i
+WHERE OBJECT_NAME(i.object_id) = 'Fact_PaymentTransactions'
+ORDER BY i.name;
 GO
