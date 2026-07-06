@@ -1,77 +1,82 @@
-# Entity Relationship (ER) Diagram
+# Entity Relationship (ER) Diagram Overview
 
 ## Overview
 
-The Entity Relationship (ER) Diagram represents the logical database structure of the Enterprise FinTech Payment Intelligence Platform. It illustrates how the Fact table and Dimension tables are connected through Primary Keys (PK) and Foreign Keys (FK).
+The Entity Relationship (ER) Diagram provides a logical representation of the database structure used in the Enterprise FinTech Payment Intelligence Platform.
+
+It illustrates the entities, their attributes, primary keys, foreign keys, and the relationships between them.
+
+The ER Diagram serves as the blueprint of the database before analytical queries are developed.
 
 ---
 
-## Tables
+# Purpose
 
-### Fact_PaymentTransactions
+The ER Diagram was created to:
 
-The central table of the database that stores every payment transaction.
-
-**Primary Key**
-- TransactionID
-
-**Foreign Keys**
-- TransactionTypeKey
-- FraudKey
-
-**Measures**
-- Step
-- Amount
-- OldBalanceOrig
-- NewBalanceOrig
-- OldBalanceDest
-- NewBalanceDest
+- Define the database structure
+- Identify entities and their attributes
+- Establish relationships between tables
+- Ensure data integrity using primary and foreign keys
+- Support efficient SQL query development
+- Provide a clear understanding of the data model
 
 ---
 
-### Dim_TransactionType
+# Database Entities
 
-Stores unique transaction types.
+The database consists of four primary entities:
 
-**Primary Key**
-- TransactionTypeKey
-
-**Attribute**
-- TransactionType
-
-Examples:
-- CASH_IN
-- CASH_OUT
-- DEBIT
-- PAYMENT
-- TRANSFER
+| Entity | Description |
+|----------|-------------|
+| Fact_PaymentTransactions | Stores all payment transaction records |
+| Dim_Time | Stores unique transaction time steps |
+| Dim_TransactionType | Stores payment transaction types |
+| Dim_Fraud | Stores fraud classifications |
 
 ---
 
-### Dim_Fraud
+# Primary Keys
 
-Stores fraud-related information.
+Each entity contains a unique primary key.
 
-**Primary Key**
-- FraudKey
-
-**Attributes**
-- IsFraud
-- IsFlaggedFraud
-
----
-
-## Relationships
-
-The database contains two One-to-Many (1:M) relationships.
-
-1. Dim_TransactionType → Fact_PaymentTransactions
-2. Dim_Fraud → Fact_PaymentTransactions
-
-Each transaction references one transaction type and one fraud category, while each dimension record can be associated with many transactions.
+| Table | Primary Key |
+|--------|-------------|
+| Fact_PaymentTransactions | TransactionID |
+| Dim_Time | TimeKey |
+| Dim_TransactionType | TransactionTypeKey |
+| Dim_Fraud | FraudKey |
 
 ---
 
-## Purpose
+# Foreign Keys
 
-The ER Diagram provides a clear view of the database structure, ensuring data integrity through Primary Key and Foreign Key relationships. It serves as the logical blueprint of the database before performing analytical queries and reporting.
+The Fact Table references each Dimension Table through foreign keys.
+
+| Foreign Key | References |
+|--------------|------------|
+| TimeKey | Dim_Time |
+| TransactionTypeKey | Dim_TransactionType |
+| FraudKey | Dim_Fraud |
+
+---
+
+# ER Diagram
+
+> Insert the exported ER Diagram image below.
+
+![ER Diagram](er_diagram.png)
+
+---
+
+# Design Summary
+
+The ER Diagram provides a structured representation of the data warehouse and ensures that relationships between entities are clearly defined before analytical processing.
+
+This design supports data integrity, simplifies SQL development, and forms the foundation for payment analytics, fraud detection, and business intelligence.
+
+---
+
+# Conclusion
+
+The ER Diagram represents the logical design of the Enterprise FinTech Payment Intelligence Platform and provides the structural foundation for the Star Schema implemented in SQL Server.
