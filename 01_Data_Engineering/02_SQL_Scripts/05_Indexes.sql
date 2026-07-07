@@ -1,11 +1,12 @@
 /*
 ==============================================================
 Enterprise FinTech Payment Intelligence Platform
-File: 05_Indexes.sql
+File: 05_Indexes.sql (Phase 1 Final Step)
 
 Purpose:
-Create Non-Clustered Indexes on the Fact_PaymentTransactions 
-table to dramatically reduce query execution time for analytics.
+Creates Non-Clustered Indexes on the Fact table foreign keys
+and highly queried measures (Amount) to optimize Phase 2 
+analytics and BI reporting performance.
 ==============================================================
 */
 
@@ -13,9 +14,11 @@ USE Enterprise_FinTech_Payment_Intelligence;
 GO
 
 PRINT '--- Beginning Index Creation ---';
+PRINT '--- (Please wait... indexing 6.3 million rows takes a moment) ---';
+GO
 
 --------------------------------------------------------------
--- 1. Index: TimeKey (Crucial for Time-Series Analysis)
+-- 1. Index: TimeKey (Crucial for Time-Series Analytics)
 --------------------------------------------------------------
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE name = 'IX_Fact_TimeKey' AND object_id = OBJECT_ID('dbo.Fact_PaymentTransactions'))
 BEGIN
@@ -48,24 +51,24 @@ END
 GO
 
 --------------------------------------------------------------
--- 4. Index: SourceAccount (Optimizes Sender Behavioral Analytics)
+-- 4. Index: SourceAccountKey (Optimizes Sender Behavioral Analytics)
 --------------------------------------------------------------
-IF NOT EXISTS (SELECT * FROM sys.indexes WHERE name = 'IX_Fact_SourceAccount' AND object_id = OBJECT_ID('dbo.Fact_PaymentTransactions'))
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE name = 'IX_Fact_SourceAccountKey' AND object_id = OBJECT_ID('dbo.Fact_PaymentTransactions'))
 BEGIN
-    CREATE NONCLUSTERED INDEX IX_Fact_SourceAccount 
-    ON dbo.Fact_PaymentTransactions(SourceAccount);
-    PRINT 'Created Index: IX_Fact_SourceAccount';
+    CREATE NONCLUSTERED INDEX IX_Fact_SourceAccountKey 
+    ON dbo.Fact_PaymentTransactions(SourceAccountKey);
+    PRINT 'Created Index: IX_Fact_SourceAccountKey';
 END
 GO
 
 --------------------------------------------------------------
--- 5. Index: DestinationAccount (Optimizes Receiver Risk Profiling)
+-- 5. Index: DestinationAccountKey (Optimizes Receiver Risk Profiling)
 --------------------------------------------------------------
-IF NOT EXISTS (SELECT * FROM sys.indexes WHERE name = 'IX_Fact_DestinationAccount' AND object_id = OBJECT_ID('dbo.Fact_PaymentTransactions'))
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE name = 'IX_Fact_DestinationAccountKey' AND object_id = OBJECT_ID('dbo.Fact_PaymentTransactions'))
 BEGIN
-    CREATE NONCLUSTERED INDEX IX_Fact_DestinationAccount 
-    ON dbo.Fact_PaymentTransactions(DestinationAccount);
-    PRINT 'Created Index: IX_Fact_DestinationAccount';
+    CREATE NONCLUSTERED INDEX IX_Fact_DestinationAccountKey 
+    ON dbo.Fact_PaymentTransactions(DestinationAccountKey);
+    PRINT 'Created Index: IX_Fact_DestinationAccountKey';
 END
 GO
 
@@ -80,18 +83,27 @@ BEGIN
 END
 GO
 
-PRINT '--- All Indexes Created Successfully ---';
+PRINT '==============================================';
+PRINT 'ALL INDEXES CREATED SUCCESSFULLY';
+PRINT 'Phase 1: Data Architecture is 100% Complete.';
+PRINT '==============================================';
 GO
 
-/*==============================================================
-Step 7 : Verify Created Indexes
-==============================================================*/
+--------------------------------------------------------------
+-- 7. Verify Created Indexes
+--------------------------------------------------------------
+PRINT '';
+PRINT '--- Verifying Created Indexes ---';
+GO
 
 SELECT
+    t.name AS TableName,
     i.name AS IndexName,
-    i.type_desc AS IndexType,
-    OBJECT_NAME(i.object_id) AS TableName
+    i.type_desc AS IndexType
 FROM sys.indexes i
-WHERE OBJECT_NAME(i.object_id) = 'Fact_PaymentTransactions'
+INNER JOIN sys.tables t
+    ON i.object_id = t.object_id
+WHERE t.name = 'Fact_PaymentTransactions'
+AND i.type_desc = 'NONCLUSTERED'
 ORDER BY i.name;
 GO
