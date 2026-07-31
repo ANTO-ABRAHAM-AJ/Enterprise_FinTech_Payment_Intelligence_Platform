@@ -1,0 +1,83 @@
+ .gitignore                                         |       19 [32m+[m[31m-[m
+ 00_Business_Context/00_Executive_Summary.md        |      302 [32m+[m[31m-[m
+ 00_Business_Context/01_Business_Problem.md         |      220 [32m+[m[31m-[m
+ 00_Business_Context/02_Business_Objectives.md      |      273 [32m+[m[31m-[m
+ 00_Business_Context/03_Stakeholders.md             |      442 [32m+[m[31m-[m
+ 00_Business_Context/04_FinTech_Payment_Domain.md   |      386 [32m+[m
+ 00_Business_Context/04_Payment_Domain_Notes.md     |      323 [31m-[m
+ 00_Business_Context/05_Business_KPIs.md            |      465 [32m+[m
+ 00_Business_Context/05_KPIs.md                     |      406 [31m-[m
+ 00_Business_Context/06_Project_Scope.md            |      387 [32m+[m[31m-[m
+ 00_Business_Context/07_Project_Timeline.md         |      427 [32m+[m[31m-[m
+ .../01_Dataset/dataset_description.md              |      161 [32m+[m
+ .../02_SQL_Scripts/02_Staging_Table.sql            |        4 [32m+[m
+ ...{03_Data_Cleaning.sql => 03_Data_Profiling.sql} |        0
+ .../02_SQL_Scripts/04_Star_Schema.sql              |        4 [32m+[m
+ .../03_Star_Schema/03_Star_Schema_Explanation.md   |      232 [32m+[m[31m-[m
+ 01_Data_Engineering/04_ER_Diagram/README.MD        |       10 [32m+[m[31m-[m
+ .../05_Data_Dictionary/Data_Dictionary.md          |      290 [32m+[m[31m-[m
+ 01_Data_Engineering/06_excel_analysis/README.md    |       35 [32m+[m
+ .../29_SQL_Business_Case_Studies.sql               |        0
+ 02_SQL_Analytics/README.md                         |       55 [32m+[m
+ 03_Advanced_SQL/README.md                          |       38 [32m+[m
+ .../02_Notebooks/03_Model_Training.ipynb           |        0
+ .../02_Notebooks/04_Model_Evaluation.ipynb         |        0
+ .../{02_Notebooks/01_EDA.ipynb => README.md}       |        0
+ 04_Machine_Learning/datasets/y_test.csv            |  1272525 [32m++[m
+ 04_Machine_Learning/datasets/y_train_smote.csv     | 10167053 [32m++++++++++++++++[m
+ .../models/Champion_Fraud_Model.pkl                |      Bin [31m0[m -> [32m12918185[m bytes
+ 04_Machine_Learning/models/Feature_List.pkl        |      Bin [31m0[m -> [32m423[m bytes
+ .../models/LogisticRegression_Model.pkl            |      Bin [31m0[m -> [32m1679[m bytes
+ 04_Machine_Learning/models/RandomForest_Model.pkl  |      Bin [31m0[m -> [32m12918089[m bytes
+ 04_Machine_Learning/models/Scaler.pkl              |      Bin [31m0[m -> [32m1751[m bytes
+ 04_Machine_Learning/models/XGBoost_Model.pkl       |      Bin [31m0[m -> [32m334091[m bytes
+ 04_Machine_Learning/models/model_metadata.json     |       14 [32m+[m
+ .../notebooks/01_Data_Preparation.ipynb            |      735 [32m+[m
+ .../notebooks/02_Exploratory_Data_Analysis.ipynb   |      993 [32m+[m
+ .../notebooks/03_Feature_Engineering.ipynb         |      659 [32m+[m
+ .../notebooks/04_Data_Preprocessing.ipynb          |      689 [32m+[m
+ .../notebooks/05_Model_Training.ipynb              |      427 [32m+[m
+ .../notebooks/06_Model_Evaluation.ipynb            |      830 [32m+[m
+ .../07_Model_Deployment_Preparation.ipynb          |      250 [32m+[m
+ .../notebooks/08_Model_Explainability_SHAP.ipynb   |      148 [32m+[m
+ .../notebooks/09_Business_Recommendations.md       |       32 [32m+[m
+ 04_Machine_Learning/outputs/SHAP.png               |      Bin [31m0[m -> [32m136567[m bytes
+ .../outputs/confusion_matrix_logistic.png          |      Bin [31m0[m -> [32m15762[m bytes
+ .../outputs/confusion_matrix_randomforest.png      |      Bin [31m0[m -> [32m15281[m bytes
+ .../outputs/confusion_matrix_xgboost.png           |      Bin [31m0[m -> [32m15692[m bytes
+ .../outputs/feature_importance_randomforest.png    |      Bin [31m0[m -> [32m36235[m bytes
+ .../outputs/feature_importance_xgboost.png         |      Bin [31m0[m -> [32m35341[m bytes
+ 04_Machine_Learning/outputs/model_comparison.csv   |        4 [32m+[m
+ .../outputs/precision_recall_logistic.png          |      Bin [31m0[m -> [32m21045[m bytes
+ .../outputs/precision_recall_randomforest.png      |      Bin [31m0[m -> [32m16716[m bytes
+ .../outputs/precision_recall_xgboost.png           |      Bin [31m0[m -> [32m17313[m bytes
+ 04_Machine_Learning/outputs/roc_curve_logistic.png |      Bin [31m0[m -> [32m18677[m bytes
+ .../outputs/roc_curve_randomforest.png             |      Bin [31m0[m -> [32m18677[m bytes
+ 04_Machine_Learning/outputs/roc_curve_xgboost.png  |      Bin [31m0[m -> [32m17494[m bytes
+ .../01_PowerBI/FinTech_Payment_Intelligence.pbix   |        0
+ 05_Business_Intelligence/02_DAX_Measures.md        |       36 [32m+[m
+ 05_Business_Intelligence/README.md                 |      118 [32m+[m
+ .../01_Business_Recommendations.md                 |        0
+ 06_Business_Recommendations/02_RCA_Summary.md      |        0
+ 06_Business_Recommendations/03_A_B_Testing_Plan.md |        0
+ 06_Business_Recommendations/04_Business_Impact.md  |        0
+ .../05_Future_Enhancements.md                      |        0
+ 06_Product_Analytics/01_Business_Problem.md        |       36 [32m+[m
+ 06_Product_Analytics/02_North_Star_Metric.md       |       58 [32m+[m
+ 06_Product_Analytics/03_KPI_Tree.md                |      152 [32m+[m
+ 06_Product_Analytics/04_Product_Metrics.md         |      120 [32m+[m
+ 06_Product_Analytics/05_Product_Recommendations.md |      188 [32m+[m
+ 06_Product_Analytics/06_Feature_Prioritization.md  |      149 [32m+[m
+ 06_Product_Analytics/07_Experiment_Design.md       |      142 [32m+[m
+ .../08_Business_Impact_Analysis.md                 |      160 [32m+[m
+ .../01_Fraud_Spike_Investigation.md                |      147 [32m+[m
+ 07_Business_Case_Studies/01_SQL_Case_Studies .sql  |      184 [31m-[m
+ .../02_Top_Fraud_Contributors.md                   |      148 [32m+[m
+ .../03_Suspicious_High_Value_Accounts.md           |      151 [32m+[m
+ .../04_Transaction_Velocity_Analysis.md            |      152 [32m+[m
+ .../05_Fraud_Hotspot_Detection.md                  |      149 [32m+[m
+ .../06_Customer_Activity_Segmentation.md           |      152 [32m+[m
+ .../07_Running_Fraud_Amount_Analysis.md            |      149 [32m+[m
+ .../08_Transaction_Type_Risk_Ranking.md            |      150 [32m+[m
+ .../README.md                                      |        0
+ 82 files changed, 11449780 insertions(+), 1599 deletions(-)

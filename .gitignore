@@ -21,3 +21,9 @@ __pycache__/
 
 # Temporary files
 *.tmp
+# Large datasets
+04_Machine_Learning/datasets/
+01_Data_Engineering/01_Dataset/paysim_raw.csv
+
+# Power BI
+05_Business_Intelligence/*.pbix
