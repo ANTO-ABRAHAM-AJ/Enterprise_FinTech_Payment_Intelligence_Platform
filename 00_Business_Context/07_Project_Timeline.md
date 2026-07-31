@@ -1,184 +1,401 @@
-# Project Roadmap
-
-## Project Overview
-
-The Enterprise FinTech Payment Intelligence Platform is developed through multiple phases, following an end-to-end enterprise analytics workflow. Each phase builds upon the previous one, ensuring a structured approach from business understanding to deployment-ready analytics.
+# Project Timeline
 
 ---
 
-# Version 1: Enterprise Analytics Platform
+# Overview
 
-## Phase 1 – Business Understanding
+The Enterprise FinTech Payment Intelligence Platform was developed using a structured, phase-based approach that mirrors the software development lifecycle (SDLC) followed in enterprise analytics projects.
 
-### Objectives
+The project was divided into multiple phases, beginning with business understanding and progressing through data engineering, analytics, machine learning, business intelligence, and documentation. Each phase produced specific deliverables that contributed to the overall solution.
 
-- Understand the digital payment ecosystem
-- Define the business problem
-- Identify stakeholders
-- Define business KPIs
-- Establish project scope
+---
 
-### Deliverables
+# Project Roadmap
+
+```
+Business Understanding
+          │
+          ▼
+Data Engineering
+          │
+          ▼
+Data Warehousing
+          │
+          ▼
+SQL Analytics
+          │
+          ▼
+Machine Learning
+          │
+          ▼
+Explainable AI
+          │
+          ▼
+Power BI Dashboards
+          │
+          ▼
+Documentation
+          │
+          ▼
+GitHub Portfolio
+```
+
+---
+
+# Phase 1: Business Understanding
+
+## Objective
+
+Understand the business problem, identify stakeholders, define objectives, and establish the project scope.
+
+## Activities
+
+- Studied the FinTech payment ecosystem
+- Defined business problems
+- Identified key stakeholders
+- Established business objectives
+- Defined project scope
+- Documented business KPIs
+- Understood fraud detection requirements
+
+## Deliverables
 
 - Executive Summary
-- Business Problem
+- Business Problem Document
 - Business Objectives
-- Stakeholders
-- Payment Domain Notes
+- Stakeholder Analysis
+- Payment Domain Documentation
 - Business KPIs
 - Project Scope
 
 ---
 
-## Phase 2 – Data Engineering
+# Phase 2: Data Engineering
 
-### Objectives
+## Objective
 
-- Understand the PaySim dataset
-- Build SQL Server database
-- Design Star Schema
-- Clean and validate data
-- Optimize database performance
+Prepare clean and reliable data for analytics and machine learning.
 
-### Deliverables
+## Activities
 
-- SQL Server Database
-- Staging Tables
-- Data Cleaning Scripts
+- Imported payment transaction dataset
+- Performed data exploration
+- Removed inconsistencies
+- Handled missing values
+- Feature engineering
+- Data validation
+- Prepared modeling dataset
+
+## Deliverables
+
+- Clean Dataset
+- Feature Engineered Dataset
+- Data Preparation Notebook
+- Exploratory Data Analysis Notebook
+
+---
+
+# Phase 3: Data Warehousing
+
+## Objective
+
+Design and implement a scalable SQL data warehouse.
+
+## Activities
+
+- Designed Star Schema
+- Created Fact Table
+- Created Dimension Tables
+- Implemented SQL Server database
+- Loaded processed data
+- Created indexes
+- Optimized queries
+
+## Deliverables
+
+- SQL Database
 - Star Schema
-- ER Diagram
+- Fact Table
+- Dimension Tables
 - Data Dictionary
+- ER Diagram
 
 ---
 
-## Phase 3 – Payment Analytics
+# Phase 4: SQL Analytics
 
-### Objectives
+## Objective
 
-Analyze payment operations using SQL.
+Generate business insights using advanced SQL.
 
-### Deliverables
+## Activities
 
-- Transaction Success Rate Analysis
-- Transaction Failure Analysis
-- Authorization Analysis
-- Settlement Analysis
-- Gateway Analytics
-- Processor Analytics
-- Payment Method Analytics
-- Customer Analytics
-- Refund Analytics
-- Chargeback Analytics
-- Root Cause Analysis Reports
+- Business KPI calculations
+- Fraud analysis
+- Transaction trend analysis
+- Customer behavior analysis
+- Payment type analysis
+- Daily transaction analysis
+- High-value transaction analysis
 
----
+## Deliverables
 
-## Phase 4 – Fraud Analytics
-
-### Objectives
-
-Analyze fraud trends and customer risk.
-
-### Deliverables
-
-- Fraud SQL Queries
-- Fraud Dashboards
-- Fraud KPIs
-- Velocity Fraud Analysis
-- Risk Scoring
-- Fraud Investigation Reports
+- SQL Scripts
+- Business Queries
+- Analytical Reports
+- KPI Calculations
 
 ---
 
-## Phase 5 – Machine Learning
+# Phase 5: Machine Learning
 
-### Objectives
+## Objective
 
-Develop and evaluate fraud prediction models.
+Develop predictive models for fraud detection.
 
-### Deliverables
+## Activities
 
-- Data Preprocessing
-- Feature Engineering
-- Model Training
-- Model Evaluation
-- Feature Importance Analysis
+### Data Preparation
+
+- Dataset preparation
+- Train-test split
+- Feature scaling
+
+### Model Development
+
+Developed multiple classification models:
+
+- Logistic Regression
+- Random Forest
+- XGBoost
+
+### Model Evaluation
+
+Compared models using:
+
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+- ROC-AUC
+- Confusion Matrix
+- Precision-Recall Curve
+
+### Champion Model Selection
+
+Selected:
+
+**Random Forest**
+
+based on overall business and technical performance.
+
+## Deliverables
+
+- ML Pipeline
+- Trained Models
+- Model Evaluation Report
+- Champion Model
 
 ---
 
-## Phase 6 – Business Intelligence
+# Phase 6: Explainable AI
 
-### Objectives
+## Objective
 
-Develop interactive executive dashboards.
+Improve transparency of machine learning predictions.
 
-### Deliverables
+## Activities
 
-- Executive Dashboard
-- Payment Operations Dashboard
-- Fraud Dashboard
-- Customer Analytics Dashboard
+- Generated SHAP values
+- Feature importance analysis
+- Local prediction explanation
+- Global model explanation
+- Business interpretation
+
+## Deliverables
+
+- SHAP Analysis
+- Feature Importance Report
+- Explainability Visualizations
 
 ---
 
-## Phase 7 – Business Recommendations
+# Phase 7: Business Intelligence
 
-### Objectives
+## Objective
 
-Transform analytical findings into business recommendations.
+Develop interactive dashboards for different stakeholder groups.
 
-### Deliverables
+## Dashboard 1
 
-- Root Cause Analysis Summary
+### Executive Dashboard
+
+Features:
+
+- Total Transactions
+- Transaction Value
+- Fraud Rate
+- High-Value Transactions
+- Daily Trends
+- Business KPIs
+
+---
+
+## Dashboard 2
+
+### Fraud Analytics Dashboard
+
+Features:
+
+- Fraud Trends
+- Fraud by Transaction Type
+- Fraud by Time of Day
+- High-Value Fraud
+- Investigation Table
+- Fraud Insights
+
+---
+
+## Dashboard 3
+
+### Explainable AI Dashboard
+
+Features:
+
+- Champion Model
+- Precision
+- Recall
+- ROC-AUC
+- Feature Importance
+- SHAP Explanation
 - Business Recommendations
-- Business Impact Assessment
-- A/B Testing Proposal
+
+## Deliverables
+
+- Power BI Report
+- Executive Dashboard
+- Fraud Dashboard
+- Explainable AI Dashboard
 
 ---
 
-## Phase 8 – Documentation & Presentation
+# Phase 8: Documentation
 
-### Objectives
+## Objective
 
-Prepare complete project documentation and portfolio.
+Create professional documentation for project understanding and maintenance.
 
-### Deliverables
+## Activities
+
+- Business documentation
+- Technical documentation
+- SQL documentation
+- Machine learning documentation
+- Dashboard documentation
+- Repository organization
+- README preparation
+
+## Deliverables
+
+- Markdown Documentation
+- README
+- Folder Structure
+- Project Reports
+
+---
+
+# Phase 9: GitHub Portfolio
+
+## Objective
+
+Prepare the project for public presentation as an enterprise portfolio.
+
+## Activities
+
+- Repository organization
+- Folder restructuring
+- Documentation review
+- Code cleanup
+- README optimization
+- Version control
+- Final quality assurance
+
+## Deliverables
 
 - GitHub Repository
-- Architecture Diagram
-- Final Report
-- Project Presentation
-- Demo Script
+- Professional Documentation
+- Portfolio Project
+- Resume-ready Artifacts
 
 ---
 
-# Version 2 – Advanced Enhancements
+# Project Milestones
 
-Future enhancements planned after completing Version 1 include:
-
-- Real-Time Fraud Monitoring Simulation
-- Simulated Live Transaction Streaming
-- Live Fraud Risk Scoring Dashboard
-- Intelligent Payment Routing Recommendations
-- Automated Fraud Alert Generation
-- Apache Kafka-based Streaming Analytics
-- REST API Integration
-- Cloud Deployment
-- Advanced Machine Learning Models
+| Milestone | Status |
+|-----------|--------|
+| Business Understanding | ✅ Completed |
+| Data Engineering | ✅ Completed |
+| Data Warehousing | ✅ Completed |
+| SQL Analytics | ✅ Completed |
+| Machine Learning | ✅ Completed |
+| Explainable AI | ✅ Completed |
+| Power BI Dashboards | ✅ Completed |
+| Documentation | ✅ Completed |
+| GitHub Portfolio | ✅ Completed |
 
 ---
 
-# Final Outcome
+# Project Deliverables Summary
 
-Upon completion, the project will demonstrate an end-to-end enterprise analytics workflow covering:
+| Phase | Deliverables |
+|--------|--------------|
+| Business Understanding | Business Context Documents |
+| Data Engineering | Clean Dataset, EDA, Feature Engineering |
+| Data Warehousing | SQL Database, Star Schema |
+| SQL Analytics | SQL Queries, KPI Reports |
+| Machine Learning | Trained Models, Champion Model |
+| Explainable AI | SHAP Analysis, Feature Importance |
+| Business Intelligence | Power BI Dashboards |
+| Documentation | Markdown Files, README |
+| Portfolio | GitHub Repository |
 
-- Business Understanding
-- Data Engineering
-- Payment Analytics
-- Fraud Analytics
-- Machine Learning
-- Business Intelligence
-- Business Recommendations
-- Executive Reporting
+---
 
-The completed platform will serve as a comprehensive FinTech analytics portfolio project showcasing business analysis, SQL, data engineering, machine learning, Power BI, and data-driven decision-making skills.
+# Technologies Used Throughout the Project
+
+| Category | Technology |
+|----------|------------|
+| Programming | Python |
+| Database | Microsoft SQL Server |
+| Query Language | T-SQL |
+| Data Processing | Pandas, NumPy |
+| Machine Learning | Scikit-learn, XGBoost |
+| Explainability | SHAP |
+| Visualization | Power BI |
+| Documentation | Markdown |
+| Version Control | Git & GitHub |
+
+---
+
+# Key Outcomes
+
+The project successfully demonstrates:
+
+- End-to-end enterprise analytics workflow
+- SQL-based data warehousing
+- Advanced business analytics
+- Machine learning fraud detection
+- Explainable Artificial Intelligence
+- Interactive business intelligence dashboards
+- Professional technical documentation
+- Enterprise portfolio readiness
+
+---
+
+# Conclusion
+
+The Enterprise FinTech Payment Intelligence Platform was executed using a structured, phase-driven approach that reflects industry-standard software and analytics development practices.
+
+From understanding the business problem to building a scalable SQL data warehouse, developing machine learning models, implementing Explainable AI, and delivering interactive Power BI dashboards, each phase contributed to a comprehensive enterprise solution.
+
+The completed project showcases expertise in business analysis, data engineering, SQL, machine learning, business intelligence, and technical documentation, making it a strong portfolio project for roles in Business Analytics, Data Analytics, and FinTech.

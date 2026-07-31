@@ -1,27 +1,92 @@
 # Enterprise Data Dictionary
 
-## Overview
+---
 
-This document defines the schema of the **Enterprise FinTech Payment Intelligence** data warehouse. The database is implemented in **Microsoft SQL Server** using the **Kimball Star Schema** methodology to support scalable analytical processing, fraud analysis, and business intelligence reporting.
+# Overview
 
-The schema consists of one central fact table and five supporting dimension tables connected through surrogate keys to maintain referential integrity and optimize query performance.
+The **Enterprise Data Dictionary** serves as the central metadata reference for the **Enterprise FinTech Payment Intelligence Platform**. It provides a standardized definition of every table, column, key, and relationship within the analytical data warehouse.
+
+The warehouse is implemented in **Microsoft SQL Server** using the **Kimball Star Schema** methodology, where transactional data is stored in a central Fact table and descriptive business attributes are organized into Dimension tables.
+
+This document ensures consistency across SQL analytics, Power BI dashboards, machine learning workflows, and future enhancements by providing a single source of truth for the database schema.
 
 ---
 
-# Fact Table: `Fact_PaymentTransactions`
+# Database Information
 
-**Description**
+| Attribute | Value |
+|-----------|-------|
+| Database Name | Enterprise_FinTech_Payment_Intelligence |
+| Database Platform | Microsoft SQL Server |
+| Data Warehouse Model | Kimball Star Schema |
+| Total Fact Tables | 1 |
+| Total Dimension Tables | 5 |
+| Total Tables | 6 |
+| Primary Keys | 6 |
+| Foreign Keys | 5 |
 
-Stores every payment transaction as a measurable business event. This table contains financial measures and foreign keys that connect each transaction to its corresponding business dimensions.
+---
+
+# Database Design Standards
+
+The data warehouse follows several enterprise design principles to ensure scalability, maintainability, and analytical performance.
+
+## Design Principles
+
+- Kimball Dimensional Modeling
+- Star Schema Architecture
+- Surrogate Keys for all Dimension Tables
+- Referential Integrity using Foreign Keys
+- Atomic Transaction-Level Fact Table
+- Optimized for OLAP and Business Intelligence workloads
+
+---
+
+# Fact Table
+
+# Fact_PaymentTransactions
+
+## Business Purpose
+
+The **Fact_PaymentTransactions** table is the central table of the analytical warehouse. Each record represents a single payment transaction processed within the digital payment platform.
+
+The table stores measurable business facts and references descriptive information through foreign keys to the corresponding dimension tables.
+
+## Business Usage
+
+This table supports:
+
+- Business KPI calculation
+- Fraud detection analysis
+- Transaction reporting
+- Executive dashboards
+- Payment analytics
+- Machine learning feature extraction
+
+## Primary Key
+
+**TransactionID**
+
+## Referenced Dimensions
+
+- Dim_Time
+- Dim_TransactionType
+- Dim_Fraud
+- Dim_SourceAccount
+- Dim_DestinationAccount
+
+---
+
+## Columns
 
 | Column Name | Data Type | Key | Description |
-| :--- | :--- | :--- | :--- |
-| TransactionID | BIGINT | PK | Unique surrogate identifier for each transaction record. |
-| TimeKey | INT | FK | References the transaction time in `Dim_Time`. |
-| TransactionTypeKey | INT | FK | References the transaction category in `Dim_TransactionType`. |
-| FraudKey | INT | FK | References the fraud classification in `Dim_Fraud`. |
-| SourceAccountKey | INT | FK | References the originating account in `Dim_SourceAccount`. |
-| DestinationAccountKey | INT | FK | References the destination account in `Dim_DestinationAccount`. |
+|-------------|-----------|-----|-------------|
+| TransactionID | BIGINT | PK | Unique surrogate identifier assigned to each transaction. |
+| TimeKey | INT | FK | References the associated record in the Time dimension. |
+| TransactionTypeKey | INT | FK | References the transaction category. |
+| FraudKey | INT | FK | References the fraud classification. |
+| SourceAccountKey | INT | FK | References the originating account. |
+| DestinationAccountKey | INT | FK | References the receiving account. |
 | Amount | DECIMAL(18,2) | - | Monetary value of the transaction. |
 | OldBalanceOrig | DECIMAL(18,2) | - | Source account balance before the transaction. |
 | NewBalanceOrig | DECIMAL(18,2) | - | Source account balance after the transaction. |
@@ -30,76 +95,207 @@ Stores every payment transaction as a measurable business event. This table cont
 
 ---
 
-# Dimension Table: `Dim_Time`
+# Dimension Tables
 
-**Description**
+---
 
-Stores derived temporal attributes used for time-based reporting and trend analysis.
+# Dim_Time
+
+## Business Purpose
+
+Stores all time-related attributes used for time-series reporting, trend analysis, and dashboard filtering.
+
+## Business Usage
+
+Supports:
+
+- Daily transaction analysis
+- Fraud trend reporting
+- Time-based KPIs
+- Executive dashboard filters
+
+## Primary Key
+
+**TimeKey**
+
+## Referenced By
+
+Fact_PaymentTransactions
+
+### Columns
 
 | Column Name | Data Type | Key | Description |
-| :--- | :--- | :--- | :--- |
-| TimeKey | INT | PK | Surrogate key for the time dimension. |
-| Step | INT | - | Original simulation step where one step represents one hour. |
-| HourOfSimulation | INT | - | Hour within a standardized 24-hour cycle. |
-| DayNumber | INT | - | Sequential day number within the simulation. |
+|-------------|-----------|-----|-------------|
+| TimeKey | INT | PK | Surrogate key for the Time dimension. |
+| Step | INT | - | Original simulation step representing one hour. |
+| HourOfSimulation | INT | - | Hour within the standardized 24-hour cycle. |
+| DayNumber | INT | - | Sequential day number of the simulation. |
 | PeriodOfDay | VARCHAR(20) | - | Categorized period of the day (Night, Morning, Afternoon, Evening). |
 
 ---
 
-# Dimension Table: `Dim_TransactionType`
+# Dim_TransactionType
 
-**Description**
+## Business Purpose
 
-Stores the category of each payment transaction.
+Stores the different categories of payment transactions processed by the platform.
+
+## Business Usage
+
+Supports:
+
+- Payment channel analysis
+- Transaction segmentation
+- Fraud comparison by transaction type
+- Dashboard filtering
+
+## Primary Key
+
+**TransactionTypeKey**
+
+## Referenced By
+
+Fact_PaymentTransactions
+
+### Columns
 
 | Column Name | Data Type | Key | Description |
-| :--- | :--- | :--- | :--- |
+|-------------|-----------|-----|-------------|
 | TransactionTypeKey | INT | PK | Surrogate key for the transaction type. |
-| TransactionType | VARCHAR(20) | - | Transaction category (PAYMENT, TRANSFER, CASH_IN, CASH_OUT, DEBIT). |
+| TransactionType | VARCHAR(20) | - | Category of transaction (PAYMENT, TRANSFER, CASH_IN, CASH_OUT, DEBIT). |
 
 ---
 
-# Dimension Table: `Dim_Fraud`
+# Dim_Fraud
 
-**Description**
+## Business Purpose
 
-Stores fraud-related indicators associated with each transaction.
+Stores fraud classifications associated with payment transactions.
+
+## Business Usage
+
+Supports:
+
+- Fraud reporting
+- Fraud KPIs
+- Fraud dashboards
+- Machine learning evaluation
+
+## Primary Key
+
+**FraudKey**
+
+## Referenced By
+
+Fact_PaymentTransactions
+
+### Columns
 
 | Column Name | Data Type | Key | Description |
-| :--- | :--- | :--- | :--- |
+|-------------|-----------|-----|-------------|
 | FraudKey | INT | PK | Surrogate key for the fraud dimension. |
-| IsFraud | BIT | - | Indicates whether the transaction is actually fraudulent (1 = Fraud, 0 = Legitimate). |
-| IsFlaggedFraud | BIT | - | Indicates whether the transaction was flagged by the legacy fraud detection rules (1 = Flagged, 0 = Not Flagged). |
+| IsFraud | BIT | - | Indicates whether the transaction is fraudulent (1 = Fraud, 0 = Legitimate). |
+| IsFlaggedFraud | BIT | - | Indicates whether the transaction was flagged by legacy fraud detection rules. |
 
 ---
 
-# Dimension Table: `Dim_SourceAccount`
+# Dim_SourceAccount
 
-**Description**
+## Business Purpose
 
-Stores unique identifiers for all originating accounts involved in payment transactions.
+Stores the unique identifiers of all originating (sender) accounts.
+
+## Business Usage
+
+Supports:
+
+- Customer behavior analysis
+- Sender profiling
+- Fraud investigation
+- Transaction tracing
+
+## Primary Key
+
+**SourceAccountKey**
+
+## Referenced By
+
+Fact_PaymentTransactions
+
+### Columns
 
 | Column Name | Data Type | Key | Description |
-| :--- | :--- | :--- | :--- |
+|-------------|-----------|-----|-------------|
 | SourceAccountKey | INT | PK | Surrogate key for the source account. |
-| SourceAccountID | VARCHAR(50) | - | Original alphanumeric identifier of the originating account. |
+| SourceAccountID | VARCHAR(50) | - | Original identifier of the sender account. |
 
 ---
 
-# Dimension Table: `Dim_DestinationAccount`
+# Dim_DestinationAccount
 
-**Description**
+## Business Purpose
 
-Stores unique identifiers for all destination accounts involved in payment transactions.
+Stores the unique identifiers of all destination (receiver) accounts.
+
+## Business Usage
+
+Supports:
+
+- Receiver analysis
+- Money flow tracking
+- Network analysis
+- Fraud investigation
+
+## Primary Key
+
+**DestinationAccountKey**
+
+## Referenced By
+
+Fact_PaymentTransactions
+
+### Columns
 
 | Column Name | Data Type | Key | Description |
-| :--- | :--- | :--- | :--- |
+|-------------|-----------|-----|-------------|
 | DestinationAccountKey | INT | PK | Surrogate key for the destination account. |
-| DestinationAccountID | VARCHAR(50) | - | Original alphanumeric identifier of the receiving account. |
+| DestinationAccountID | VARCHAR(50) | - | Original identifier of the receiving account. |
 
 ---
 
-## Summary
+# Relationship Summary
+
+| Parent Table | Child Table | Relationship |
+|--------------|-------------|--------------|
+| Dim_Time | Fact_PaymentTransactions | One-to-Many |
+| Dim_TransactionType | Fact_PaymentTransactions | One-to-Many |
+| Dim_Fraud | Fact_PaymentTransactions | One-to-Many |
+| Dim_SourceAccount | Fact_PaymentTransactions | One-to-Many |
+| Dim_DestinationAccount | Fact_PaymentTransactions | One-to-Many |
+
+The use of surrogate keys and foreign key relationships ensures referential integrity while enabling efficient analytical queries across the data warehouse.
+
+---
+
+# Integration with the Project
+
+The Enterprise Data Dictionary provides the metadata foundation for every phase of the project.
+
+The warehouse schema directly supports:
+
+- SQL Analytics
+- Advanced SQL Reporting
+- Business KPI Calculation
+- Fraud Detection Analysis
+- Power BI Dashboards
+- Machine Learning Feature Engineering
+- Explainable AI
+
+By maintaining a standardized schema definition, the Data Dictionary ensures consistency across all analytical components of the Enterprise FinTech Payment Intelligence Platform.
+
+---
+
+# Summary
 
 | Object | Count |
 |---------|------:|
@@ -111,10 +307,10 @@ Stores unique identifiers for all destination accounts involved in payment trans
 
 ---
 
-**Database:** Enterprise_FinTech_Payment_Intelligence
+# Conclusion
 
-**Architecture:** Kimball Star Schema
+The Enterprise Data Dictionary serves as the authoritative reference for the analytical data warehouse powering the Enterprise FinTech Payment Intelligence Platform.
 
-**Platform:** Microsoft SQL Server
+It documents the purpose, structure, relationships, and business meaning of every table and column, providing a consistent foundation for SQL development, business intelligence reporting, fraud analytics, and machine learning workflows.
 
-**Status:** Phase 1 Complete
+By combining standardized metadata with a Kimball Star Schema architecture, the platform delivers a scalable, maintainable, and enterprise-ready data warehouse designed for modern payment analytics.

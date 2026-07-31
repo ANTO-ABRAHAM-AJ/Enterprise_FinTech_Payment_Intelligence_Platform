@@ -7,6 +7,10 @@ Purpose:
 Create the staging table and load data from the raw transaction table.
 The staging table is used for all cleaning and transformation operations.
 
+NOTE:
+The payment_transactions_raw table is populated using
+load_to_sql.py before executing this script.
+
 Author  : Anto Abraham AJ
 Database: Enterprise_FinTech_Payment_Intelligence
 ===============================================================================

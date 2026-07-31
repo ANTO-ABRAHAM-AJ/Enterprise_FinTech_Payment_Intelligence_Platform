@@ -1,236 +1,384 @@
 # Stakeholders
 
-## Overview
+---
 
-The **Enterprise FinTech Payment Intelligence Platform** is designed to support multiple business and technical stakeholders across the digital payment ecosystem. Each stakeholder interacts with the platform based on their business responsibilities, operational objectives, and decision-making requirements.
+# Overview
 
-The platform provides role-specific analytics, operational insights, fraud monitoring, and business intelligence to improve payment reliability, customer experience, and overall business performance.
+The success of an enterprise payment intelligence platform depends on collaboration between multiple business and technical stakeholders. Each stakeholder has unique responsibilities, business objectives, and information requirements.
+
+The Enterprise FinTech Payment Intelligence Platform is designed to support these stakeholders by providing reliable analytics, fraud insights, machine learning predictions, and interactive dashboards that improve operational efficiency and decision-making.
 
 ---
 
-# Stakeholder Matrix
+# Stakeholder Groups
 
-| Stakeholder | Role | Primary Objective |
-|-------------|------|-------------------|
-| Executive Leadership | Strategic Decision Makers | Business growth and operational performance |
-| Product Managers | Product Owners | Improve customer payment experience |
-| Business Analysts | Business Decision Support | Generate insights and business recommendations |
-| Operations Team | Payment Operations | Ensure reliable payment processing |
-| Fraud & Risk Team | Risk Management | Detect and prevent fraudulent activities |
-| Data Engineering Team | Data Infrastructure | Maintain reliable and scalable data pipelines |
-| Data Science Team | Predictive Analytics | Develop fraud detection models |
-| Customer Support Team | Customer Operations | Resolve payment and refund issues |
-| Merchants | Business Partners | Receive successful customer payments |
-| Customers | End Users | Complete secure and reliable digital payments |
+The primary stakeholders involved in this project include:
 
----
-
-# Primary Stakeholders
-
-## 1. Executive Leadership
-
-### Responsibilities
-
-- Monitor overall business performance
-- Track revenue growth and payment reliability
-- Make strategic business decisions
-- Approve operational improvement initiatives
-
-### Platform Usage
-
-- Executive dashboards
-- Business KPI monitoring
-- Revenue insights
-- Operational performance reports
+- Executive Leadership
+- Product Managers
+- Fraud Investigation Team
+- Risk Management Team
+- Payment Operations Team
+- Customer Support Team
+- Compliance & Audit Team
+- Data Engineering Team
+- Data Science & Machine Learning Team
+- Business Intelligence Team
 
 ---
 
-## 2. Product Managers
+# Executive Leadership
 
-### Responsibilities
+## Responsibilities
 
-- Improve customer payment experience
-- Prioritize product enhancements
-- Monitor payment journey performance
-- Reduce transaction failures
+Executive leadership is responsible for defining organizational strategy, managing financial performance, and overseeing enterprise-wide risk.
 
-### Platform Usage
+Key responsibilities include:
 
-- Transaction Success Rate (TSR)
-- Customer journey analytics
-- Payment funnel analysis
-- A/B Testing insights
-- Product performance dashboards
+- Monitoring business performance
+- Reducing financial losses
+- Improving operational efficiency
+- Ensuring sustainable business growth
+- Making strategic decisions
 
----
+## Pain Points
 
-## 3. Business Analysts
+- Limited visibility into payment operations
+- Difficulty measuring fraud impact
+- Delayed business reporting
+- Inconsistent performance metrics
 
-### Responsibilities
+## How This Platform Helps
 
-- Analyze payment operations
-- Investigate transaction failures
-- Perform Root Cause Analysis (RCA)
-- Recommend business improvements
+The Executive Dashboard provides:
 
-### Platform Usage
+- Total Transactions
+- Transaction Value
+- Fraud Rate
+- High-Value Transactions
+- Business KPIs
+- Daily Payment Trends
 
-- SQL-based analysis
-- KPI dashboards
-- Business reports
-- Root Cause Analysis (RCA)
-- Business recommendations
+These insights enable leadership to make informed strategic decisions based on real-time business data.
 
 ---
 
-## 4. Operations Team
+# Product Managers
 
-### Responsibilities
+## Responsibilities
 
-- Monitor daily payment operations
-- Resolve gateway and processor issues
-- Track settlements and refunds
-- Ensure operational continuity
+Product Managers oversee payment products and ensure they deliver a secure and seamless customer experience.
 
-### Platform Usage
+Key responsibilities include:
 
-- Gateway performance dashboards
-- Processor latency reports
-- Refund analytics
-- Operational monitoring reports
+- Monitoring product performance
+- Improving customer experience
+- Identifying operational issues
+- Prioritizing product improvements
 
----
+## Pain Points
 
-## 5. Fraud & Risk Team
+- Limited understanding of payment behavior
+- Difficulty identifying customer pain points
+- Lack of operational visibility
 
-### Responsibilities
+## How This Platform Helps
 
-- Detect suspicious transactions
-- Monitor fraud trends
-- Investigate high-risk customers
-- Improve fraud prevention rules
+The platform enables Product Managers to:
 
-### Platform Usage
-
-- Fraud dashboards
-- Risk scoring analytics
-- Velocity fraud detection
-- Fraud trend reports
-- High-risk customer analysis
+- Analyze transaction trends
+- Monitor payment success
+- Understand customer payment behavior
+- Identify improvement opportunities
 
 ---
 
-## 6. Data Engineering Team
+# Fraud Investigation Team
 
-### Responsibilities
+## Responsibilities
 
-- Build and maintain data pipelines
-- Manage SQL Server databases
-- Ensure data quality and integrity
-- Optimize database performance
+Fraud Analysts investigate suspicious payment activities and identify fraudulent transactions.
 
-### Platform Usage
+Their responsibilities include:
 
-- Database monitoring
-- ETL workflows
-- Data validation reports
-- Star Schema management
+- Reviewing flagged transactions
+- Investigating suspicious accounts
+- Confirming fraud cases
+- Reducing fraud losses
+
+## Pain Points
+
+- Large investigation workload
+- Manual transaction review
+- High false-positive rates
+- Slow investigation process
+
+## How This Platform Helps
+
+The Fraud Analytics Dashboard provides:
+
+- Fraud trends
+- Fraud by transaction type
+- High-value fraud analysis
+- Suspicious transaction details
+- High-risk accounts
+
+This significantly reduces investigation time and improves fraud detection efficiency.
 
 ---
 
-## 7. Data Science Team
+# Risk Management Team
 
-### Responsibilities
+## Responsibilities
 
-- Develop fraud prediction models
-- Perform feature engineering
-- Evaluate machine learning models
-- Improve fraud detection accuracy
+The Risk Team identifies, monitors, and mitigates financial and operational risks associated with payment processing.
 
-### Platform Usage
+Responsibilities include:
+
+- Fraud risk assessment
+- Operational risk monitoring
+- Risk policy evaluation
+- Loss prevention
+
+## Pain Points
+
+- Difficulty identifying emerging risks
+- Limited fraud visibility
+- Delayed reporting
+
+## How This Platform Helps
+
+The platform provides:
+
+- Fraud monitoring
+- High-risk transaction identification
+- Risk-focused KPIs
+- Predictive fraud detection
+
+This supports proactive risk management.
+
+---
+
+# Payment Operations Team
+
+## Responsibilities
+
+The Payment Operations Team ensures smooth processing of payment transactions across the organization.
+
+Responsibilities include:
+
+- Monitoring transaction processing
+- Resolving payment issues
+- Tracking operational performance
+- Maintaining payment reliability
+
+## Pain Points
+
+- Large transaction volume
+- Limited operational insights
+- Slow issue identification
+
+## How This Platform Helps
+
+The platform enables operations teams to monitor:
+
+- Transaction volume
+- Daily payment trends
+- High-value payments
+- Transaction distributions
+
+This improves operational efficiency and payment monitoring.
+
+---
+
+# Customer Support Team
+
+## Responsibilities
+
+Customer Support assists users experiencing payment-related issues.
+
+Responsibilities include:
+
+- Resolving payment disputes
+- Handling customer complaints
+- Supporting fraud victims
+- Escalating suspicious cases
+
+## Pain Points
+
+- Delayed access to transaction information
+- Difficulty identifying fraud cases
+- Slow issue resolution
+
+## How This Platform Helps
+
+The dashboards provide quick access to transaction insights, enabling faster investigation and improved customer support.
+
+---
+
+# Compliance & Audit Team
+
+## Responsibilities
+
+Compliance teams ensure that payment operations comply with financial regulations and internal policies.
+
+Responsibilities include:
+
+- Regulatory reporting
+- Internal audits
+- Fraud monitoring
+- Policy enforcement
+
+## Pain Points
+
+- Limited reporting capabilities
+- Difficulty tracking suspicious activities
+- Lack of transparency in AI decisions
+
+## How This Platform Helps
+
+The platform offers:
+
+- Centralized reporting
+- Fraud monitoring metrics
+- Explainable AI outputs
+- Consistent business KPIs
+
+This supports audit readiness and regulatory compliance.
+
+---
+
+# Data Engineering Team
+
+## Responsibilities
+
+The Data Engineering Team manages data ingestion, storage, transformation, and availability.
+
+Responsibilities include:
+
+- Data pipeline development
+- Database management
+- Data quality assurance
+- Warehouse maintenance
+
+## Pain Points
+
+- Handling large datasets
+- Maintaining data consistency
+- Optimizing query performance
+
+## How This Platform Helps
+
+The project implements:
+
+- SQL Server Data Warehouse
+- Star Schema design
+- Cleaned datasets
+- Optimized SQL queries
+
+This provides a scalable foundation for analytics.
+
+---
+
+# Data Science & Machine Learning Team
+
+## Responsibilities
+
+The Data Science team develops predictive models for fraud detection and evaluates their performance.
+
+Responsibilities include:
 
 - Feature engineering
 - Model training
 - Model evaluation
-- Feature importance analysis
-- Prediction reports
+- Explainable AI implementation
+
+## Pain Points
+
+- Selecting the best-performing model
+- Explaining predictions to business users
+- Maintaining model accuracy
+
+## How This Platform Helps
+
+The project includes:
+
+- Multiple ML algorithms
+- Model comparison
+- Champion model selection
+- SHAP Explainability
+
+These capabilities improve model transparency and stakeholder trust.
 
 ---
 
-## 8. Customer Support Team
+# Business Intelligence Team
 
-### Responsibilities
+## Responsibilities
 
-- Resolve customer payment issues
-- Track refund status
-- Investigate failed transactions
-- Support customer queries
+The Business Intelligence Team develops dashboards and delivers insights to business users.
 
-### Platform Usage
+Responsibilities include:
 
-- Refund reports
-- Transaction lookup
-- Customer payment history
-- Failed transaction reports
+- Dashboard development
+- KPI reporting
+- Data visualization
+- Business performance analysis
 
----
+## Pain Points
 
-# External Stakeholders
+- Inconsistent reporting
+- Manual dashboard updates
+- Limited business insights
 
-## 1. Merchants
+## How This Platform Helps
 
-### Responsibilities
+Power BI dashboards provide:
 
-- Accept customer payments
-- Monitor payment success rates
-- Track settlements
-- Reduce payment failures
+- Executive reporting
+- Fraud analytics
+- AI explainability
+- Interactive filtering
+- Business KPIs
 
-### Expected Benefits
-
-- Higher payment success rates
-- Faster settlements
-- Reduced payment failures
-- Improved customer satisfaction
+This enables efficient reporting and data-driven decision-making.
 
 ---
 
-## 2. Customers
+# Stakeholder Benefits Summary
 
-### Responsibilities
-
-- Complete secure digital payments
-- Receive timely refunds
-- Experience reliable payment services
-
-### Expected Benefits
-
-- Successful payment transactions
-- Faster refund processing
-- Secure payment experience
-- Higher trust in the payment platform
+| Stakeholder | Primary Benefit |
+|-------------|-----------------|
+| Executive Leadership | Strategic decision-making through enterprise KPIs |
+| Product Managers | Better understanding of payment performance and customer behavior |
+| Fraud Investigation Team | Faster fraud detection and investigation |
+| Risk Management Team | Improved risk monitoring and fraud prevention |
+| Payment Operations Team | Enhanced operational visibility |
+| Customer Support Team | Faster resolution of payment-related issues |
+| Compliance & Audit Team | Improved reporting and regulatory compliance |
+| Data Engineering Team | Reliable and scalable data infrastructure |
+| Data Science Team | Transparent and explainable fraud detection models |
+| Business Intelligence Team | Interactive dashboards and actionable business insights |
 
 ---
 
-# Stakeholder Summary
+# Stakeholder Communication
 
-| Stakeholder | Primary Goal |
-|-------------|--------------|
-| Executive Leadership | Business Growth & Strategic Decision Making |
-| Product Managers | Improve Customer Payment Experience |
-| Business Analysts | Business Insights & Operational Improvement |
-| Operations Team | Reliable Payment Processing |
-| Fraud & Risk Team | Fraud Detection & Risk Mitigation |
-| Data Engineering Team | Reliable Data Infrastructure |
-| Data Science Team | Fraud Prediction & Model Development |
-| Customer Support Team | Faster Customer Issue Resolution |
-| Merchants | Reliable Payment Collection |
-| Customers | Secure & Successful Digital Payments |
+The platform facilitates collaboration across departments by providing a shared view of payment data and analytics.
+
+- Executives gain high-level business insights.
+- Product Managers monitor customer-facing payment performance.
+- Fraud Analysts investigate suspicious activities.
+- Risk Teams assess operational and financial risks.
+- Data Scientists refine predictive models.
+- Business Intelligence teams deliver interactive reports.
+
+This shared access to reliable information promotes faster decision-making and improves cross-functional collaboration.
 
 ---
 
 # Conclusion
 
-The **Enterprise FinTech Payment Intelligence Platform** is designed to deliver role-specific insights for business, product, operations, engineering, and executive stakeholders. By combining payment analytics, fraud analytics, machine learning, and business intelligence into a unified platform, the solution enables faster operational decision-making, improved payment reliability, stronger fraud prevention, and enhanced customer experience.
+The Enterprise FinTech Payment Intelligence Platform is designed to meet the needs of multiple stakeholders across business, operations, analytics, and technology.
 
-The platform promotes collaboration across multiple teams while supporting data-driven decisions that contribute to operational excellence, business growth, and long-term payment ecosystem reliability.
+By providing centralized data, advanced analytics, machine learning predictions, explainable AI, and interactive dashboards, the platform enables each stakeholder to perform their responsibilities more effectively while contributing to the organization's overall goals of reducing fraud, improving operational efficiency, and supporting data-driven decision-making.

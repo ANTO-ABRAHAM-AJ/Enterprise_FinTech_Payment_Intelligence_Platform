@@ -3,6 +3,10 @@
 Enterprise FinTech Payment Intelligence Platform
 File: 04_Star_Schema.sql (FINAL - Fully Normalized & Governed)
 
+WARNING:
+Running this script will recreate the warehouse
+and remove existing warehouse tables.
+
 Purpose:
 Builds the Kimball-standard Star Schema with strict data 
 integrity constraints (UNIQUE, NOT NULL), mathematically 

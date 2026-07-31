@@ -1,0 +1,14 @@
+{
+    "project_name": "Enterprise FinTech Payment Intelligence Platform",
+    "model_type": "Random Forest Classifier",
+    "version": "1.0.0",
+    "author": "Anto Abraham",
+    "input_features": 20,
+    "primary_metrics": {
+        "Precision": 0.9572,
+        "Recall": 0.9945,
+        "F1_Score": 0.9755,
+        "ROC_AUC": 0.9988
+    },
+    "description": "Champion model for detecting fraudulent FinTech transactions."
+}

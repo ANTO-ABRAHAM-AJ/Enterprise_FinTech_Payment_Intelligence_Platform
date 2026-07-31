@@ -1,5 +1,10 @@
-# Ignore large datasets
-01_Data_Engineering/01_Dataset/paysim_raw.csv
+# ==========================
+# Machine Learning Datasets
+# ==========================
+04_Machine_Learning/datasets/
+
+# Large Power BI Dashboard
+05_Business_Intelligence/*.pbix
 
 # Python cache
 __pycache__/
@@ -8,5 +13,11 @@ __pycache__/
 # Jupyter checkpoints
 .ipynb_checkpoints/
 
-# VS Code settings
+# VS Code
 .vscode/
+
+# SQLite
+*.sqlite
+
+# Temporary files
+*.tmp
