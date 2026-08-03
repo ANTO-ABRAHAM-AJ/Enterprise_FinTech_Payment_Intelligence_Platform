@@ -1,10 +1,16 @@
 # KPI Tree
 
-## Overview
+## Enterprise FinTech Payment Intelligence Platform
 
-A Key Performance Indicator (KPI) Tree is a hierarchical framework that breaks down a high-level business objective into measurable operational metrics. It helps organizations understand how business performance is influenced by different analytical and operational factors.
+---
 
-For the Enterprise FinTech Payment Intelligence Platform, the KPI Tree is centered around the project's North Star Metric: **Fraud Loss Prevention**.
+# Overview
+
+A Key Performance Indicator (KPI) Tree is a hierarchical framework that connects an organization's strategic objective with measurable operational metrics. Rather than monitoring isolated KPIs, a KPI Tree demonstrates how day-to-day business performance contributes to long-term product success.
+
+For the Enterprise FinTech Payment Intelligence Platform, every business metric ultimately contributes to the project's North Star Metric:
+
+## **Fraud Loss Prevention**
 
 ---
 
@@ -14,21 +20,21 @@ For the Enterprise FinTech Payment Intelligence Platform, the KPI Tree is center
 North Star Metric
 Fraud Loss Prevention
 │
-├── Fraud Detection Performance
+├── Fraud Performance
 │   ├── Fraud Rate
 │   ├── Fraud Transactions
 │   ├── Fraud Amount
 │   └── High-Value Fraud Transactions
 │
-├── Payment Activity
+├── Payment Performance
 │   ├── Total Transactions
 │   ├── Total Transaction Value
 │   ├── Average Transaction Value
 │   └── Transaction Type Distribution
 │
-├── Time-Based Monitoring
-│   ├── Daily Transaction Trends
-│   ├── Hourly Transaction Trends
+├── Operational Performance
+│   ├── Daily Transaction Volume
+│   ├── Hourly Transaction Activity
 │   ├── Peak Transaction Hours
 │   └── Period of Day Analysis
 │
@@ -43,110 +49,146 @@ Fraud Loss Prevention
 
 # KPI Categories
 
-## 1. Fraud Detection Performance
+## 1. Fraud Performance
 
-These KPIs evaluate the platform's ability to identify fraudulent activities and estimate the financial impact of fraud.
+### Objective
 
-### Metrics
+Measure how effectively the platform detects and prevents fraudulent financial activity.
+
+### KPIs
 
 - Fraud Rate
 - Fraud Transactions
 - Fraud Amount
 - High-Value Fraud Transactions
 
-### Business Purpose
+### Business Impact
 
-These metrics help identify fraud patterns, monitor financial risk, and evaluate the effectiveness of fraud detection strategies.
+These metrics directly measure fraud exposure and evaluate whether fraud prevention initiatives are successfully reducing financial risk.
 
 ---
 
-## 2. Payment Activity
+## 2. Payment Performance
 
-These KPIs measure the overall payment volume and transaction behavior across the platform.
+### Objective
 
-### Metrics
+Monitor the overall health, scale, and activity of the payment platform.
+
+### KPIs
 
 - Total Transactions
 - Total Transaction Value
 - Average Transaction Value
 - Transaction Type Distribution
 
-### Business Purpose
+### Business Impact
 
-These metrics provide insights into transaction growth, customer payment behavior, and platform usage.
+These KPIs help organizations understand platform usage, payment behavior, and transaction growth.
 
 ---
 
-## 3. Time-Based Monitoring
+## 3. Operational Performance
 
-These KPIs analyze how transaction activity changes over time.
+### Objective
 
-### Metrics
+Analyze transaction activity across different time periods to improve operational planning and fraud monitoring.
 
-- Daily Transaction Trends
-- Hourly Transaction Trends
+### KPIs
+
+- Daily Transaction Volume
+- Hourly Transaction Activity
 - Peak Transaction Hours
 - Period of Day Analysis
 
-### Business Purpose
+### Business Impact
 
-These metrics help identify operational peaks, transaction patterns, and periods requiring enhanced fraud monitoring.
+Operational metrics help identify traffic spikes, transaction patterns, and periods that require additional fraud monitoring resources.
 
 ---
 
 ## 4. Account Risk Monitoring
 
-These KPIs identify accounts that require additional attention due to unusually high transaction values or transaction frequency.
+### Objective
 
-### Metrics
+Identify accounts exhibiting unusual transaction behavior that may indicate elevated fraud risk.
+
+### KPIs
 
 - High-Value Accounts
 - Transaction Frequency
 - Top Source Accounts
 - Top Destination Accounts
 
-### Business Purpose
+### Business Impact
 
-These metrics support risk monitoring, anomaly detection, and investigation of potentially suspicious accounts.
+Supports proactive fraud investigation by highlighting accounts that require additional monitoring.
+
+---
+
+# KPI Relationship
+
+Each KPI category contributes toward improving the project's North Star Metric.
+
+```
+Operational Activity
+        │
+        ▼
+Business KPIs
+        │
+        ▼
+Fraud Monitoring
+        │
+        ▼
+Fraud Loss Prevention
+```
+
+This hierarchy enables business stakeholders to understand how operational performance influences fraud prevention outcomes.
 
 ---
 
 # Business Value
 
-The KPI Tree provides a structured framework for monitoring payment platform performance and fraud risk.
+The KPI Tree enables organizations to:
 
-It enables stakeholders to:
-
-- Monitor operational performance.
-- Identify emerging fraud patterns.
-- Support data-driven product decisions.
-- Improve fraud monitoring capabilities.
-- Align business objectives with measurable KPIs.
+- Align operational metrics with strategic objectives.
+- Monitor fraud exposure using measurable indicators.
+- Improve executive visibility into payment platform performance.
+- Support data-driven product and business decisions.
+- Prioritize operational improvements based on KPI performance.
 
 ---
 
 # Project Alignment
 
-This KPI framework is implemented throughout the project.
-
 | Project Phase | Contribution |
-|---------------|-------------|
-| Phase 2 – SQL Analytics | Calculates business KPIs |
-| Phase 4 – Machine Learning | Predicts fraudulent transactions |
-| Phase 5 – Power BI | Visualizes KPI performance |
-| Phase 6 – Product Analytics | Supports product decision-making |
-| Phase 7 – Business Case Studies | Uses KPIs for business investigations |
+|---------------|--------------|
+| Business Context | Defines business objectives |
+| Data Engineering | Creates the analytical foundation |
+| SQL Analytics | Calculates enterprise KPIs |
+| Advanced SQL | Builds reusable reporting objects |
+| Machine Learning | Predicts fraudulent transactions |
+| Business Intelligence | Visualizes KPI performance |
+| Product Analytics | Converts KPIs into product decisions |
+| Business Case Studies | Applies KPIs to real business scenarios |
 
 ---
 
 # Limitations
 
-The KPI Tree is designed using only metrics supported by the PaySim dataset.
+The KPI Tree is built entirely using metrics supported by the PaySim dataset.
 
-Metrics such as Transaction Success Rate (TSR), Authorization Rate, Chargeback Rate, Refund Rate, and Customer Retention require production payment system data and are therefore outside the scope of this project.
+The following enterprise payment metrics are intentionally excluded because they require production payment infrastructure:
+
+- Transaction Success Rate (TSR)
+- Authorization Rate
+- Payment Failure Rate
+- Chargeback Rate
+- Refund Rate
+- Customer Retention
+- Customer Lifetime Value (CLV)
 
 ---
 
 # Conclusion
 
-The KPI Tree connects the project's North Star Metric with measurable operational KPIs. It provides a structured approach for monitoring payment performance, fraud risk, and business outcomes while supporting informed product and business decisions.
+The KPI Tree provides a structured framework that connects operational activities with strategic business objectives. By organizing payment, fraud, operational, and account risk metrics around the North Star Metric, the platform enables business stakeholders to monitor performance, identify emerging risks, and support informed product decisions.
