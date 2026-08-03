@@ -21,14 +21,14 @@ Interpret the predictions made by the champion Random Forest fraud detection mod
 
 ### 1. Global SHAP Feature Importance
 
-![Global SHAP Feature Importance](images/shap_01_global_feature_importance.png)
+![Global SHAP Feature Importance](../images/shap_01_global_feature_importance.png)
 
 The global SHAP analysis ranks the most influential features across the entire dataset. Features related to transaction amount and balance movements contribute most significantly to fraud prediction.
 
 ---
 
 ### 2. Local Transaction Explanation
-![Local SHAP Waterfall Explanation](images/shap_02_local_transaction_explanation.png)
+![Local SHAP Waterfall Explanation](../images/shap_02_local_transaction_explanation.png)
 
 A SHAP Waterfall plot was generated for an individual fraudulent transaction, illustrating how each feature increased or decreased the predicted fraud risk. This provides complete transparency into the model's decision-making process.
 
