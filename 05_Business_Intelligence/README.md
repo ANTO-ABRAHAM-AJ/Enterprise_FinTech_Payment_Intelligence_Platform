@@ -1,60 +1,60 @@
 # Enterprise FinTech Payment Intelligence Platform
-## Phase 5 — Business Intelligence & Executive Dashboards
+## Phase 5 – Business Intelligence (Power BI)
 
-![Power BI](https://img.shields.io/badge/PowerBI-Dashboard-yellow)
+![Power BI](https://img.shields.io/badge/Power_BI-Dashboard-yellow)
 ![DAX](https://img.shields.io/badge/DAX-Measures-blue)
 ![Star Schema](https://img.shields.io/badge/Data_Model-Star_Schema-success)
-![Machine Learning](https://img.shields.io/badge/Explainable_AI-SHAP-orange)
+![Explainable AI](https://img.shields.io/badge/Explainable_AI-SHAP-orange)
 ![Status](https://img.shields.io/badge/Phase-Completed-brightgreen)
 
 ---
 
 # Overview
 
-This phase transforms the Enterprise FinTech Payment Intelligence Platform into an executive decision-support system using Microsoft Power BI.
+This phase transforms the Enterprise FinTech Payment Intelligence Platform into a complete enterprise Business Intelligence solution using Microsoft Power BI.
 
-The solution combines enterprise payment analytics, fraud intelligence, and machine learning explainability into a unified reporting platform.
-
-Unlike traditional dashboards, this project follows a complete enterprise BI architecture consisting of:
-
-- Star Schema Data Model
-- DAX Semantic Layer
-- Executive KPI Dashboards
-- Fraud Analytics
-- Explainable AI Dashboard
-- Machine Learning Insights
+The solution combines descriptive analytics, fraud monitoring, executive reporting, and machine learning explainability into a unified reporting platform. It follows enterprise Power BI development best practices by implementing a Star Schema semantic model, reusable DAX measures, interactive dashboards, and AI-powered insights.
 
 ---
 
-# Architecture
+# Solution Architecture
 
-SQL Data Warehouse
-        ↓
-Star Schema Data Model
-        ↓
+```
+SQL Server Data Warehouse
+            │
+            ▼
+Enterprise Star Schema
+            │
+            ▼
 Power BI Semantic Model
-        ↓
-Executive Dashboards
-        ↓
-Fraud Analytics
-        ↓
-Explainable AI & ML Insights
+            │
+            ▼
+Interactive Business Dashboards
+            │
+ ┌──────────┼──────────┐
+ │          │          │
+ ▼          ▼          ▼
+Executive  Fraud   Explainable AI
+Dashboard Analytics & ML Insights
+```
 
 ---
 
-# Dashboards
+# Business Intelligence Deliverables
 
 ## Executive Dashboard
 
-Designed for senior management to monitor overall payment platform health.
+Designed for business executives to monitor overall payment platform performance.
 
-Key Insights
+### Key Highlights
 
 - Total Transactions
 - Total Transaction Value
 - Average Transaction Value
 - Fraud Rate
-- Daily Transaction Volume
+- Fraud Transactions
+- High Value Transactions
+- Daily Transaction Trend
 - Fraud Trend
 - Transaction Type Distribution
 - Executive Business Insights
@@ -63,11 +63,11 @@ Key Insights
 
 ## Fraud Analytics Dashboard
 
-Designed for Fraud Operations teams.
+Designed for fraud operations teams to investigate suspicious transactions.
 
-Key Insights
+### Key Highlights
 
-- Fraud Transaction Analysis
+- Fraud Transactions
 - Fraud Amount
 - High Value Fraud Detection
 - Fraud by Transaction Type
@@ -77,31 +77,32 @@ Key Insights
 
 ---
 
-## Explainable AI Dashboard
+## Explainable AI & Model Insights Dashboard
 
 Designed for Risk Analytics and Machine Learning teams.
 
-Key Insights
+### Key Highlights
 
 - Champion Model (Random Forest)
 - ML Precision
 - ML Recall
 - ROC-AUC
-- SHAP Feature Importance
+- Feature Importance
+- SHAP Explainability
 - AI Prediction Card
-- Explainable AI Insights
+- Model Recommendation
 
 ---
 
 # Enterprise Data Model
 
-The solution follows an enterprise Star Schema.
+The analytical solution is built using an enterprise Star Schema.
 
-Fact Table
+## Fact Table
 
 - Fact_PaymentTransactions
 
-Dimension Tables
+## Dimension Tables
 
 - Dim_Time
 - Dim_TransactionType
@@ -109,44 +110,58 @@ Dimension Tables
 - Dim_DestinationAccount
 - Dim_Fraud
 
-Machine Learning Tables
+## Machine Learning Tables
 
 - ML_Feature_Importance
 - SHAP_Local_Explanation
 
-The Machine Learning tables are intentionally disconnected from the analytical model because they support only Explainable AI visualizations.
+The Machine Learning tables remain intentionally disconnected from the analytical model because they support Explainable AI visualizations only.
 
 ---
 
-# Technologies
+# Technologies Used
 
 - Microsoft Power BI
 - DAX
 - SQL Server
 - Star Schema Data Modeling
+- Python
 - Random Forest
 - SHAP Explainability
-- Python
 - Machine Learning
 
 ---
 
-# Folder Structure
+# Repository Structure
 
+```
 05_Business_Intelligence
 │
 ├── Enterprise_FinTech_Dashboard.pbix
 ├── README.md
+├── 01_Dashboard_Results.md
 ├── 02_DAX_Measures.md
 │
-├── images
-│   ├── bi_01_executive_dashboard.png
-│   ├── bi_02_fraud_analytics_dashboard.png
-│   ├── bi_03_explainable_ai_dashboard.png
-│   └── bi_04_data_model.png
+└── images
+    ├── bi_01_executive_dashboard.png
+    ├── bi_02_fraud_analytics_dashboard.png
+    ├── bi_03_explainable_ai_dashboard.png
+    └── bi_04_data_model.png
+```
 
 ---
 
-# Business Outcome
+# Key Business Outcomes
 
-This Business Intelligence layer converts enterprise payment data into actionable business intelligence, enabling executives, fraud analysts, and machine learning teams to make faster and more informed decisions from a single reporting platform.
+- Built an enterprise-grade Business Intelligence solution for payment analytics and fraud monitoring.
+- Designed a scalable Star Schema semantic model following Power BI best practices.
+- Developed reusable DAX measures for executive KPIs and fraud analytics.
+- Delivered three interactive dashboards tailored for executives, fraud analysts, and AI stakeholders.
+- Integrated Explainable AI using Random Forest model performance metrics and SHAP feature importance.
+- Enabled data-driven decision-making through interactive visual analytics and enterprise reporting.
+
+---
+
+# Conclusion
+
+This Business Intelligence layer transforms enterprise payment transaction data into actionable insights by combining executive reporting, operational fraud analytics, and Explainable AI within a single Power BI solution. The project demonstrates an end-to-end enterprise BI workflow—from semantic data modeling and DAX development to interactive dashboard design and machine learning integration.
