@@ -42,7 +42,7 @@ The objectives of this investigation are to:
 **Reference**
 
 ```
-29_SQL_Business_Case_Studies.sql
+06_SQL_Business_Case_Studies.sql
 
 Case Study 4
 Transaction Velocity Analysis
