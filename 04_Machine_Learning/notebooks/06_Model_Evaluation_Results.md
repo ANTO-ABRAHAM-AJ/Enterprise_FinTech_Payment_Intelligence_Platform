@@ -1,25 +1,34 @@
+<div align="center">
+
+  # 🏆 Model Evaluation Results
+
+  ![Phase](https://img.shields.io/badge/Phase-Machine_Learning-0078D4?style=for-the-badge)
+  ![Pipeline](https://img.shields.io/badge/Pipeline-Model_Evaluation-success?style=for-the-badge)
+
+</div>
+
+<br>
+
 # Notebook 06 – Model Evaluation Results
 
-## Objective
+## 🎯 Objective
 
 Evaluate Logistic Regression, Random Forest, and XGBoost models using multiple classification metrics, compare their predictive performance, and identify the best model for enterprise fraud detection.
 
 ---
 
-# Dataset Used
+## 📥 Dataset Used
 
 Testing Dataset (Original Distribution)
 
-- Samples: 1,272,524
-- Features: 20
+- Samples: **1,272,524**
+- Features: **20**
 - Class Distribution: Original (Highly Imbalanced)
 
-### Dataset Loading
-
+### 🔍 Dataset Loading
 ![Dataset Loading](../images/me_01_dataset_loading.png)
 
-**Observations**
-
+**Observations:**
 - Successfully loaded testing dataset.
 - Restored all trained machine learning models.
 - Predictions and probability scores generated successfully.
@@ -27,10 +36,9 @@ Testing Dataset (Original Distribution)
 
 ---
 
-# Model 1 – Logistic Regression
+# 📈 Model 1 – Logistic Regression
 
-## Performance Metrics
-
+## 📊 Performance Metrics
 ![Logistic Regression Metrics](../images/me_02_logistic_metrics.png)
 
 | Metric | Value |
@@ -41,12 +49,10 @@ Testing Dataset (Original Distribution)
 | F1 Score | 7.08% |
 | ROC AUC | 99.59% |
 
-### Evaluation Charts
-
+### 📉 Evaluation Charts
 ![Logistic Charts](../images/me_03_logistic_charts.png)
 
-### Business Interpretation
-
+### 🧠 Business Interpretation
 - Excellent fraud recall.
 - Detects almost every fraud transaction.
 - Generates many false positives.
@@ -54,10 +60,9 @@ Testing Dataset (Original Distribution)
 
 ---
 
-# Model 2 – Random Forest
+# 🌲 Model 2 – Random Forest
 
-## Performance Metrics
-
+## 📊 Performance Metrics
 ![Random Forest Metrics](../images/me_04_randomforest_metrics.png)
 
 | Metric | Value |
@@ -65,15 +70,13 @@ Testing Dataset (Original Distribution)
 | Accuracy | 99.99% |
 | Precision | 95.72% |
 | Recall | 99.45% |
-| F1 Score | 97.55% |
+| F1 Score | **97.55%** |
 | ROC AUC | 99.88% |
 
-### Evaluation Charts
-
+### 📉 Evaluation Charts
 ![Random Forest Charts](../images/me_05_randomforest_charts.png)
 
-### Business Interpretation
-
+### 🧠 Business Interpretation
 - Excellent precision and recall.
 - Very low false alarms.
 - Strong production-ready fraud detection model.
@@ -81,26 +84,23 @@ Testing Dataset (Original Distribution)
 
 ---
 
-# Model 3 – XGBoost
+# 🚀 Model 3 – XGBoost
 
-## Performance Metrics
-
+## 📊 Performance Metrics
 ![XGBoost Metrics](../images/me_06_xgboost_metrics.png)
 
 | Metric | Value |
 |---------|------:|
 | Accuracy | 99.99% |
 | Precision | 92.91% |
-| Recall | 99.76% |
+| Recall | **99.76%** |
 | F1 Score | 96.21% |
-| ROC AUC | 99.99% |
+| ROC AUC | **99.99%** |
 
-### Evaluation Charts
-
+### 📉 Evaluation Charts
 ![XGBoost Charts](../images/me_07_xgboost_charts.png)
 
-### Business Interpretation
-
+### 🧠 Business Interpretation
 - Outstanding fraud detection capability.
 - Highest ROC AUC among all models.
 - Extremely strong recall.
@@ -108,10 +108,9 @@ Testing Dataset (Original Distribution)
 
 ---
 
-# Model Comparison
+# 📊 Model Comparison
 
-## Comparative Results
-
+## 📋 Comparative Results
 ![Model Comparison](../images/me_08_model_comparison.png)
 
 | Model | Accuracy | Precision | Recall | F1 Score | ROC AUC |
@@ -122,14 +121,13 @@ Testing Dataset (Original Distribution)
 
 ---
 
-# Feature Importance Analysis
+# 🔍 Feature Importance Analysis
 
 ![Feature Importance](../images/me_09_feature_importance.png)
 
-## Key Fraud Indicators
+## 💡 Key Fraud Indicators
 
 Top predictive variables include:
-
 - Original Balance Change
 - Amount-to-Origin Balance Ratio
 - New Balance Origin
@@ -141,15 +139,14 @@ These variables contribute most significantly toward fraud detection decisions.
 
 ---
 
-# Final Model Recommendation
+# 🏆 Final Model Recommendation
 
 **Recommended Production Model:** Random Forest
 
-### Why Random Forest?
-
-- Highest F1 Score (97.55%)
-- Excellent Precision (95.72%)
-- Excellent Recall (99.45%)
+### ⭐ Why Random Forest?
+- Highest F1 Score (**97.55%**)
+- Excellent Precision (**95.72%**)
+- Excellent Recall (**99.45%**)
 - Near-perfect ROC AUC
 - Stable ensemble model
 - Better balance between fraud detection and false positives
@@ -157,10 +154,9 @@ These variables contribute most significantly toward fraud detection decisions.
 
 ---
 
-# Notebook Summary
+# 📝 Notebook Summary
 
-Completed Tasks
-
+### ✅ Completed Tasks
 - Loaded trained machine learning models.
 - Evaluated three fraud detection algorithms.
 - Generated Confusion Matrix, ROC Curve, and Precision–Recall Curve.
@@ -170,6 +166,6 @@ Completed Tasks
 
 ---
 
-## Next Step
+## ⏭️ Next Step
 
 Proceed to **Notebook 07 – Model Deployment Preparation**, where the selected Random Forest model will be packaged and prepared for enterprise deployment.

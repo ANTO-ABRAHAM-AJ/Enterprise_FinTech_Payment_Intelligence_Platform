@@ -1,12 +1,23 @@
+<div align="center">
+
+  # 🔍 Model Explainability (SHAP) Results
+
+  ![Phase](https://img.shields.io/badge/Phase-Machine_Learning-0078D4?style=for-the-badge)
+  ![Pipeline](https://img.shields.io/badge/Pipeline-Model_Explainability-success?style=for-the-badge)
+
+</div>
+
+<br>
+
 # Notebook 08 – Model Explainability (SHAP)
 
-## Objective
+## 🎯 Objective
 
 Interpret the predictions made by the champion Random Forest fraud detection model using SHAP (SHapley Additive exPlanations). Analyze both global feature importance and local transaction-level explanations to improve model transparency and business interpretability.
 
 ---
 
-## Key Activities
+## 🛠️ Key Activities
 
 - Loaded the champion Random Forest model.
 - Loaded the testing dataset.
@@ -17,10 +28,9 @@ Interpret the predictions made by the champion Random Forest fraud detection mod
 
 ---
 
-## Results
+## 📊 Results
 
 ### 1. Global SHAP Feature Importance
-
 ![Global SHAP Feature Importance](../images/shap_01_global_feature_importance.png)
 
 The global SHAP analysis ranks the most influential features across the entire dataset. Features related to transaction amount and balance movements contribute most significantly to fraud prediction.
@@ -34,7 +44,7 @@ A SHAP Waterfall plot was generated for an individual fraudulent transaction, il
 
 ---
 
-## Business Insights
+## 🧠 Business Insights
 
 - SHAP improves model transparency by explaining individual fraud predictions.
 - Global SHAP analysis identifies the strongest fraud indicators used by the model.
@@ -44,7 +54,7 @@ A SHAP Waterfall plot was generated for an individual fraudulent transaction, il
 
 ---
 
-## Deliverables
+## 📦 Deliverables
 
 - Global SHAP Feature Importance Visualization
 - Local Transaction SHAP Waterfall Explanation
