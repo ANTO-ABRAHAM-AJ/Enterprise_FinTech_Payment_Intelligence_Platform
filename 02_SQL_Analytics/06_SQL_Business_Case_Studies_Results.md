@@ -1,16 +1,8 @@
-<div align="center">
+# 💼 SQL Business Case Studies Results
 
-  # 💼 SQL Business Case Studies Results
-  ## Enterprise FinTech Payment Intelligence Platform
+## Enterprise FinTech Payment Intelligence Platform
 
-  ![Domain](https://img.shields.io/badge/Domain-FinTech%20Payments-blue?style=for-the-badge)
-  ![Focus](https://img.shields.io/badge/Focus-Business%20Case%20Studies-success?style=for-the-badge)
-  ![Impact](https://img.shields.io/badge/Impact-Actionable%20Insights-orange?style=for-the-badge)
-  ![Role](https://img.shields.io/badge/Role-Business%20Analyst-purple?style=for-the-badge)
-
-</div>
-
-<br>
+---
 
 # 📖 Overview
 
@@ -46,7 +38,7 @@ The case studies simulate real-world FinTech business scenarios using advanced S
 
 **🧠 Business Interpretation:** Several source accounts generated fraudulent transactions of **10 million** each, resulting in identical fraud rankings.
 
-**💡 Key Insight:** Large-value fraud attempts originate from multiple independent accounts rather than a single dominant fraudster.
+**💡 Key Insight:** Large-value fraud attempts are distributed across multiple source accounts rather than being concentrated in a single source account.
 
 **✅ Business Recommendation:** Implement enhanced verification and behavioral monitoring for accounts performing unusually large transactions.
 
@@ -60,11 +52,11 @@ The case studies simulate real-world FinTech business scenarios using advanced S
 
 ![Case Study 3 - High-Value Account Analysis](images/casestudy_kpi_03_suspicious_high_value_accounts.png)
 
-**🧠 Business Interpretation:** The highest-value account transferred over **92.45 million**, with several others exceeding **60 million**, indicating significant differences in customer payment behavior.
+**🧠 Business Interpretation:** The highest-value source account transferred over **92.45 million**, with several others exceeding **60 million**, indicating significant differences in source-account transaction values.
 
-**💡 Key Insight:** A relatively small group of customers contributes a disproportionately large share of total transaction value.
+**💡 Key Insight:** A small group of source accounts is associated with exceptionally high transaction values compared with the other accounts shown in the ranking.
 
-**✅ Business Recommendation:** Classify these accounts as high-value customers and continuously monitor their activity for fraud, compliance, and risk management.
+**✅ Business Recommendation:** Classify these accounts as high-value source accounts and continuously monitor their activity for fraud, compliance, and risk management.
 
 ---
 
@@ -78,7 +70,7 @@ The case studies simulate real-world FinTech business scenarios using advanced S
 
 **🧠 Business Interpretation:** Multiple source accounts share the highest activity level with **three transactions**, resulting in equal activity rankings.
 
-**💡 Key Insight:** Customer transaction activity is broadly distributed, with no single account dominating transaction frequency.
+**💡 Key Insight:** The highest transaction frequency is distributed across multiple source accounts rather than being concentrated in a single account.
 
 **✅ Business Recommendation:** Use transaction velocity as an important behavioral feature in fraud detection and customer segmentation models.
 
@@ -96,9 +88,9 @@ The case studies simulate real-world FinTech business scenarios using advanced S
 
 > *Due to the large result set, the screenshot below displays only a representative sample (first 20–30 rows) of the complete query output.*
 
-**🧠 Business Interpretation:** Fraud incidents are concentrated during specific periods of the day, particularly involving **TRANSFER** and **CASH_OUT** transactions.
+**🧠 Business Interpretation:** The highest fraud concentrations appear during specific combinations of simulation day, period of day, and transaction type, particularly involving **TRANSFER** and **CASH_OUT** transactions.
 
-**💡 Key Insight:** Fraud hotspots occur only under particular combinations of transaction type and time period rather than being randomly distributed.
+**💡 Key Insight:** Fraud concentration varies across combinations of transaction type and time period rather than being evenly distributed.
 
 **✅ Business Recommendation:** Deploy dynamic fraud detection rules that consider transaction type, time of day, and historical fraud hotspots simultaneously.
 
@@ -116,9 +108,9 @@ The case studies simulate real-world FinTech business scenarios using advanced S
 
 > *Due to the large result set, the screenshot below displays only a representative sample (first 20 rows) of the complete query output.*
 
-**🧠 Business Interpretation:** Most customer accounts fall into the **Low Activity** category because they perform only a small number of transactions.
+**🧠 Business Interpretation:** The displayed results show source accounts falling into the **Low Activity** category because they perform only a small number of transactions.
 
-**💡 Key Insight:** The payment platform serves a very broad customer base where transaction activity is widely distributed.
+**💡 Key Insight:** Transaction activity is widely distributed across the source-account population, with many accounts exhibiting relatively low transaction frequency.
 
 **✅ Business Recommendation:** Use activity segmentation to personalize customer engagement strategies and identify low-, medium-, and high-activity customers.
 
