@@ -175,4 +175,4 @@ These insights support:
 - Executive reporting
 - Strategic decision-making
 
-The analysis provides a strong analytical foundation for understanding payment flows and identifying significant transaction and account-level patterns within the **Enterprise FinTech Payment Intelligence Platform**.
+The analysis provides a strong analytical foundation for understanding payment flows and identifying significant transaction and account-level patterns within the **Enterprise FinTech Payment Intelligence Platform**
