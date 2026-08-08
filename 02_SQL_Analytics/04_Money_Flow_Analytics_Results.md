@@ -23,6 +23,7 @@ The analysis focuses on understanding how money moves throughout the payment eco
 
 **📈 SQL Output:**
 
+![KPI 1 - Largest Transactions](images/moneyflow_kpi_01_largest_transactions.png)
 
 **🧠 Business Interpretation:** The largest transaction in the result is approximately **92.45 million**, with the top transactions predominantly belonging to the **TRANSFER** transaction type.
 
@@ -38,6 +39,7 @@ The analysis focuses on understanding how money moves throughout the payment eco
 
 **📈 SQL Output:**
 
+![KPI 2 - Average Balance Movement](images/moneyflow_kpi_02_average_balance_movement.png)
 
 **🧠 Business Interpretation:** The average balance movement is approximately **-21,230**, indicating that the average `NewBalanceOrig` is higher than the average `OldBalanceOrig` across the transactions in the dataset based on the `OldBalanceOrig - NewBalanceOrig` calculation.
 
@@ -53,6 +55,7 @@ The analysis focuses on understanding how money moves throughout the payment eco
 
 **📈 SQL Output:**
 
+![KPI 3 - Total Money Sent by Source Account](images/moneyflow_kpi_03_total_money_sent_by_source_account.png)
 
 **🧠 Business Interpretation:** The leading source account transferred more than **92 million**, with several other accounts also processing substantial payment volumes.
 
@@ -68,6 +71,7 @@ The analysis focuses on understanding how money moves throughout the payment eco
 
 **📈 SQL Output:**
 
+![KPI 4 - Total Money Received by Destination Account](images/moneyflow_kpi_04_total_money_received_by_destination_account.png)
 
 **🧠 Business Interpretation:** The highest-value destination account received over **357 million**, demonstrating substantial monetary inflows through selected destination accounts within the payment ecosystem.
 
@@ -83,6 +87,7 @@ The analysis focuses on understanding how money moves throughout the payment eco
 
 **📈 SQL Output:**
 
+![KPI 5 - Running Transaction Value](images/moneyflow_kpi_05_running_transaction_value.png)
 
 **🧠 Business Interpretation:** The cumulative transaction value increases consistently throughout the simulation, reflecting continuous payment activity across all simulation days.
 
@@ -98,6 +103,7 @@ The analysis focuses on understanding how money moves throughout the payment eco
 
 **📈 SQL Output:**
 
+![KPI 6 - Daily Average Transaction Value](images/moneyflow_kpi_06_daily_average_transaction_value.png)
 
 **🧠 Business Interpretation:** Average transaction values fluctuate across simulation days, indicating changes in customer payment behavior and transaction composition over time.
 
@@ -113,6 +119,7 @@ The analysis focuses on understanding how money moves throughout the payment eco
 
 **📈 SQL Output:**
 
+![KPI 7 - Transaction Value by Period of Day](images/moneyflow_kpi_07_transaction_value_by_period_of_day.png)
 
 **🧠 Business Interpretation:** The **Afternoon** period records both the highest transaction volume and the highest transaction value, while **Night** records the lowest transaction activity and transaction value.
 
@@ -128,6 +135,7 @@ The analysis focuses on understanding how money moves throughout the payment eco
 
 **📈 SQL Output:**
 
+![KPI 8 - Largest Balance Reductions](images/moneyflow_kpi_08_largest_balance_reductions.png)
 
 **🧠 Business Interpretation:** Several transactions reduce source account balances by **10 million**, representing the largest balance decreases observed within the dataset.
 
@@ -143,6 +151,7 @@ The analysis focuses on understanding how money moves throughout the payment eco
 
 **📈 SQL Output:**
 
+![KPI 9 - 3-Day Moving Average Transaction Value](images/moneyflow_kpi_09_three_day_moving_average_Transaction_value.png)
 
 **🧠 Business Interpretation:** The 3-day moving average reduces short-term fluctuations and provides a clearer view of underlying transaction-value trends throughout the simulation.
 
