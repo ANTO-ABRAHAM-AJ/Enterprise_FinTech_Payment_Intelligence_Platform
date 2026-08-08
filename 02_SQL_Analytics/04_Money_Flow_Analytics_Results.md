@@ -151,7 +151,7 @@ The analysis focuses on understanding how money moves throughout the payment eco
 
 **📈 SQL Output:**
 
-![KPI 9 - 3-Day Moving Average Transaction Value](images/moneyflow_kpi_09_three_day_moving_average_Transaction_value.png)
+![KPI 9 - 3-Day Moving Average Transaction Value](images/moneyflow_kpi_09_three_day_moving_average_transaction_value.png)
 
 **🧠 Business Interpretation:** The 3-day moving average reduces short-term fluctuations and provides a clearer view of underlying transaction-value trends throughout the simulation.
 
@@ -175,4 +175,4 @@ These insights support:
 - Executive reporting
 - Strategic decision-making
 
-The analysis provides a strong analytical foundation for understanding payment flows and identifying significant transaction and account-level patterns within the **Enterprise FinTech Payment Intelligence Platform**
+The analysis provides a strong analytical foundation for understanding payment flows and identifying significant transaction and account-level patterns within the **Enterprise FinTech Payment Intelligence Platform**.
