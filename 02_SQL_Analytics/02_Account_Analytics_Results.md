@@ -127,12 +127,12 @@ Due to the large result set, the screenshot below displays only a representative
 
 ---
 
-## 🔀 KPI 8: Multi-Channel Source Accounts
+## 🔀 KPI 8: Multi-Transaction-Type Source Accounts
 
 **🎯 Business Objective:** Identify source accounts utilizing multiple transaction types.
 
 **📈 SQL Output:**  
-![Multi-Channel Source Accounts](images/account_kpi_08_multi_channel_source_accounts.png)
+![KPI 8: Multi-Transaction-Type Source Accounts](images/account_kpi_08_multi_channel_source_accounts.png)
 
 **🧠 Business Interpretation:** Several customer accounts utilized **three different transaction types**, while many others used **two**, indicating varying levels of payment channel adoption across the customer base.
 

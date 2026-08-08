@@ -125,7 +125,7 @@ GO
 
 /*
 ==============================================================
-KPI 8: Multi-Channel Source Accounts
+KPI 8: KPI 8: Multi-Transaction-Type Source Accounts
 Business Objective: Find source accounts using multiple transaction types.
 ==============================================================
 */
