@@ -1,80 +1,104 @@
+<div align="center">
+
+  # 📐 DAX Measures & Semantic Model
+
+  ![Phase](https://img.shields.io/badge/Phase-05%20DAX%20Measures-blue?style=for-the-badge)
+  ![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge)
+  ![Tool](https://img.shields.io/badge/Tool-Power%20BI-yellow?style=for-the-badge&logo=powerbi&logoColor=white)
+  ![Language](https://img.shields.io/badge/Language-DAX-orange?style=for-the-badge)
+
+</div>
+
+<br>
+
 # Enterprise FinTech Payment Intelligence Platform
-# Phase 5 – Business Intelligence
-# DAX Measures Documentation
+
+## 📖 Overview
+
+This document summarizes the DAX measures used throughout the Power BI semantic model.
+
+The measures provide reusable business logic for executive reporting, fraud analytics, and machine learning performance monitoring while maintaining a clean enterprise-grade data model.
 
 ---
 
-# Overview
+## 🏛️ Semantic Model Architecture
 
-This document summarizes the primary DAX measures developed for the Enterprise FinTech Payment Intelligence Platform. These measures power executive KPI cards, fraud monitoring dashboards, trend analysis, and machine learning insights within the Power BI reporting solution.
+### 📊 Fact Table
+- `Fact_PaymentTransactions`
 
-The semantic layer was designed to provide accurate, reusable, and business-friendly metrics for operational monitoring and strategic decision-making.
+### 📐 Dimension Tables
+- `Dim_Time`
+- `Dim_TransactionType`
+- `Dim_SourceAccount`
+- `Dim_DestinationAccount`
+- `Dim_Fraud`
 
----
-
-# Executive Dashboard Measures
-
-The following DAX measures support the Executive Dashboard:
-
-- Total Transactions
-- Total Transaction Value
-- Average Transaction Value
-- Fraud Transactions
-- Fraud Rate
-- High Value Transactions
-- Total Source Accounts
-- Total Destination Accounts
-
-### Business Purpose
-
-These measures provide executives with a high-level overview of payment platform health, transaction activity, fraud exposure, and customer participation.
+### 🤖 Machine Learning Tables
+- `ML_Feature_Importance`
+- `SHAP_Local_Explanation`
 
 ---
 
-# Fraud Analytics Measures
+## 📈 Executive KPI Measures
 
-The following measures support fraud investigation and risk monitoring:
-
-- Fraud Transactions
-- Fraud Amount
-- Global Fraud Rate
-- High Value Fraud Transactions
-
-### Business Purpose
-
-These measures enable fraud analysts to monitor fraud trends, identify high-risk payment categories, quantify financial exposure, and prioritize suspicious transactions for investigation.
-
----
-
-# Machine Learning Measures
-
-The following DAX measures summarize the performance of the deployed champion fraud detection model:
-
-- Champion Model
-- ML Precision
-- ML Recall
-- ML ROC-AUC
-
-### Business Purpose
-
-These KPIs communicate model effectiveness to business stakeholders and support confidence in AI-assisted fraud detection decisions.
+These measures power the Executive Dashboard and provide a high-level overview of platform performance:
+- **Total Transactions**
+- **Total Transaction Value**
+- **Average Transaction Value**
+- **Fraud Transactions**
+- **Fraud Rate %**
+- **Global Fraud Rate**
+- **High Value Transactions**
+- **Total Source Accounts**
+- **Total Destination Accounts**
 
 ---
 
-# Dashboard Usage
+## 🧠 Machine Learning KPI Measures
 
-These DAX measures are used throughout the Power BI solution to support:
-
-- Executive KPI Cards
-- Fraud Monitoring Dashboards
-- Trend Analysis
-- Machine Learning Performance Reporting
-- Explainable AI Dashboard
-- Interactive Cross-Filtering
-- Executive Decision Support
+These measures expose the production fraud detection model performance directly inside Power BI for business stakeholders:
+- **ML Champion Model**
+- **ML Precision**
+- **ML Recall**
+- **ML ROC AUC**
 
 ---
 
-# Business Impact
+## 💼 Business Purpose
 
-The DAX semantic layer transforms raw payment transaction data into meaningful business metrics that enable real-time operational monitoring, fraud detection, executive reporting, and explainable AI visualization. By centralizing calculations within reusable DAX measures, the dashboard maintains consistency, scalability, and high reporting performance across all analytical pages.
+The DAX measures enable:
+- Executive KPI monitoring
+- Fraud detection analytics
+- Financial transaction monitoring
+- Customer and account insights
+- Machine Learning model reporting
+- Explainable AI dashboard integration
+
+The semantic model is designed to provide reusable calculations, improve report performance, and support enterprise-scale analytical dashboards.
+
+---
+
+## ⚙️ Enterprise Design Highlights
+
+- **Centralized Measures Table** for reusable business calculations.
+- **Star Schema** semantic model optimization.
+- **Clear Separation** of Facts, Dimensions, and Measures.
+- **Machine Learning Metrics** integrated directly into Power BI.
+- **Explainable AI Support** using SHAP feature importance.
+- **High Performance** optimized for scalable business intelligence reporting.
+
+---
+
+## 📦 Deliverables
+
+- Executive KPI Measures
+- Fraud Analytics Measures
+- Machine Learning Performance Measures
+- Enterprise Semantic Model
+- Power BI Dashboard Integration
+
+---
+
+## ✅ Status
+
+**Status:** Completed
