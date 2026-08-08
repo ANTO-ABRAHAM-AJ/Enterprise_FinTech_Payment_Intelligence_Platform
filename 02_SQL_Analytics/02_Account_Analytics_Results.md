@@ -104,7 +104,7 @@ Due to the large result set, the screenshot below displays only a representative
 ![Average Transaction Value](images/account_kpi_06_average_transaction_value_by_source_account.png)
 
 
-**🧠 Business Interpretation:** Several accounts maintain exceptionally high average transaction values, indicating specialized payment behavior involving large-value transfers.
+**🧠 Business Interpretation:** Several source accounts exhibit exceptionally high average transaction values, indicating the presence of large-value transactions associated with those accounts.
 
 **💡 Key Insight:** Average transaction value varies substantially across customer accounts, reflecting diverse payment behaviors.
 
@@ -121,7 +121,7 @@ Due to the large result set, the screenshot below displays only a representative
 
 **🧠 Business Interpretation:** Ranking source accounts by total transaction value highlights the most financially significant customers within the platform.
 
-**💡 Key Insight:** A relatively small number of accounts contribute a disproportionately large share of the platform's overall transaction value.
+**💡 Key Insight:** A small group of source accounts ranks highly based on cumulative transaction value, highlighting accounts associated with high-value transactions.
 
 **✅ Business Recommendation:** Establish enhanced monitoring and relationship management strategies for high-value customer accounts.
 

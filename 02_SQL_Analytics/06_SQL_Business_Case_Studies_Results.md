@@ -21,8 +21,8 @@ The case studies simulate real-world FinTech business scenarios using advanced S
 
 **🎯 Business Problem:** Identify the simulation day with the highest number of fraudulent transactions.
 
-**📈 SQL Output:**  
-![Fraud Spike Investigation](images/casestudy_kpi_01_fraud_spike_investigation.png)
+**📈 SQL Output:**
+
 
 **🧠 Business Interpretation:** Day **17** recorded the highest number of fraudulent transactions (**320**) with fraud losses exceeding **63.69 million**, making it the highest fraud spike observed in the simulation period.
 
@@ -36,8 +36,8 @@ The case studies simulate real-world FinTech business scenarios using advanced S
 
 **🎯 Business Problem:** Identify source accounts responsible for the highest fraud amounts.
 
-**📈 SQL Output:**  
-![Top Fraud Contributors](images/casestudy_kpi_02_top_fraud_contributors.png)
+**📈 SQL Output:**
+
 
 **🧠 Business Interpretation:** Several source accounts generated fraudulent transactions of **10 million** each, resulting in identical fraud rankings.
 
@@ -47,12 +47,12 @@ The case studies simulate real-world FinTech business scenarios using advanced S
 
 ---
 
-## ⚠️ Case Study 3: Suspicious High-Value Accounts
+## ⚠️ Case Study 3: High-Value Account Analysis
 
 **🎯 Business Problem:** Identify accounts sending unusually large transaction values.
 
-**📈 SQL Output:**  
-![Suspicious High Value Accounts](images/casestudy_kpi_03_suspicious_high_value_accounts.png)
+**📈 SQL Output:**
+
 
 **🧠 Business Interpretation:** The highest-value account transferred over **92.45 million**, with several others exceeding **60 million**, indicating significant differences in customer payment behavior.
 
@@ -66,8 +66,8 @@ The case studies simulate real-world FinTech business scenarios using advanced S
 
 **🎯 Business Problem:** Identify highly active customer accounts based on transaction frequency.
 
-**📈 SQL Output:**  
-![Transaction Velocity Analysis](images/casestudy_kpi_04_transaction_velocity_analysis.png)
+**📈 SQL Output:**
+
 
 **🧠 Business Interpretation:** Multiple source accounts share the highest activity level with **three transactions**, resulting in equal activity rankings.
 
@@ -81,12 +81,13 @@ The case studies simulate real-world FinTech business scenarios using advanced S
 
 **🎯 Business Problem:** Identify combinations of simulation day, period of day, and transaction type with the highest fraud concentration.
 
-**📈 SQL Output:**  
+**📈 SQL Output:**
+
 **Result:** This query returned **248 records**, representing combinations of simulation day, period of day, and transaction type.
 
 Due to the large result set, the screenshot below displays only a representative sample (first 20–30 rows) of the complete query output.
 
-![Fraud Hotspot Detection](images/casestudy_kpi_05_fraud_hotspot_detection.png)
+
 
 **🧠 Business Interpretation:** Fraud incidents are concentrated during specific periods of the day, particularly involving **TRANSFER** and **CASH_OUT** transactions.
 
@@ -100,12 +101,13 @@ Due to the large result set, the screenshot below displays only a representative
 
 **🎯 Business Problem:** Segment customer accounts according to transaction frequency.
 
-**📈 SQL Output:**  
+**📈 SQL Output:**
+
 **Result:** This query returned **6,353,303 records** (one row per source account).
 
 Due to the large result set, the screenshot below displays only a representative sample (first 20 rows) of the complete query output.
 
-![Customer Activity Segmentation](images/casestudy_kpi_06_customer_activity_segmentation.png)
+
 
 **🧠 Business Interpretation:** Most customer accounts fall into the **Low Activity** category because they perform only a small number of transactions.
 
@@ -119,10 +121,10 @@ Due to the large result set, the screenshot below displays only a representative
 
 **🎯 Business Problem:** Monitor cumulative fraud losses throughout the simulation period.
 
-**📈 SQL Output:**  
-![Running Fraud Amount](images/casestudy_kpi_07_running_fraud_amount.png)
+**📈 SQL Output:**
 
-**🧠 Business Interpretation:** The cumulative fraud amount steadily increases throughout the simulation period, reaching approximately **1.206 billion** by the final day.
+
+**🧠 Business Interpretation:** The cumulative fraud amount steadily increases throughout the simulation period, reaching approximately **12.06 billion** by the final day.
 
 **💡 Key Insight:** Fraud losses accumulate continuously over time, emphasizing the financial impact of delayed fraud detection.
 
@@ -134,8 +136,8 @@ Due to the large result set, the screenshot below displays only a representative
 
 **🎯 Business Problem:** Rank transaction types according to fraud occurrence.
 
-**📈 SQL Output:**  
-![Transaction Type Risk Ranking](images/casestudy_kpi_08_transaction_type_risk_ranking.png)
+**📈 SQL Output:**
+
 
 **🧠 Business Interpretation:** **CASH_OUT** transactions rank first with **4,116** fraud cases, followed closely by **TRANSFER** transactions with **4,097** fraud cases.
 

@@ -56,7 +56,7 @@ The analysis focuses on fraud detection, fraud concentration, transaction risk, 
 
 **🧠 Business Interpretation:** Fraudulent transactions are relatively evenly distributed across Morning, Afternoon, Evening, and Night, with only slight variations between periods.
 
-**💡 Key Insight:** Fraudsters operate throughout the day rather than targeting a single time window.
+**💡 Key Insight:** Fraudulent transactions occur throughout the day rather than being concentrated in a single time period.
 
 **✅ Business Recommendation:** Maintain consistent fraud monitoring across all operating hours instead of focusing only on specific periods.
 
@@ -99,11 +99,11 @@ The analysis focuses on fraud detection, fraud concentration, transaction risk, 
 **📈 SQL Output:**  
 ![Top Fraudulent Source Accounts](images/fraud_kpi_06_top_fraudulent_source_accounts.png)
 
-**🧠 Business Interpretation:** Each listed source account is associated with one fraudulent transaction, although the fraud amounts vary significantly between accounts.
+**🧠 Business Interpretation:** The top 10 source accounts in the result each have one fraudulent transaction, while the associated fraud amounts vary significantly across accounts.
 
-**💡 Key Insight:** Fraud is distributed across multiple customer accounts rather than concentrated within a small number of repeat offenders.
+**💡 Key Insight:** The result does not show repeated fraudulent transactions among the top source accounts, although further account-level analysis would be required to determine whether fraud is concentrated among a small group of accounts.
 
-**✅ Business Recommendation:** Implement account-level risk scoring to identify suspicious behavior before additional fraudulent transactions occur.
+**✅ Business Recommendation:** Implement account-level risk scoring and monitor repeat fraudulent activity to identify accounts that may exhibit persistent suspicious behavior.
 
 ---
 

@@ -57,7 +57,7 @@ GO
 
 /*
 ===============================================================================
-CASE STUDY 3: Suspicious High-Value Accounts
+CASE STUDY 3: High-Value Account Analysis
 Business Problem: Identify accounts sending unusually large transaction values.
 ===============================================================================
 */
