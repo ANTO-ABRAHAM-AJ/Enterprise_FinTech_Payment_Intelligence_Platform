@@ -1,6 +1,16 @@
-# Data Engineering
+<div align="center">
 
-## Overview
+  # ⚙️ Data Engineering
+
+  ![Phase](https://img.shields.io/badge/Phase-Data_Engineering-0078D4?style=for-the-badge)
+  ![Database](https://img.shields.io/badge/Database-SQL_Server-cc292b?style=for-the-badge&logo=microsoft-sql-server&logoColor=white)
+  ![Architecture](https://img.shields.io/badge/Architecture-Kimball_Star_Schema-success?style=for-the-badge)
+
+</div>
+
+<br>
+
+## 📖 Overview
 
 This module establishes the analytical data foundation for the **Enterprise FinTech Payment Intelligence Platform**. It covers the complete data engineering workflow, beginning with raw dataset understanding and progressing through SQL-based data warehousing, dimensional modeling, data validation, and exploratory business analysis.
 
@@ -8,7 +18,7 @@ The implementation follows enterprise data warehousing best practices using **Mi
 
 ---
 
-## Objectives
+## 🎯 Objectives
 
 - Understand the PaySim transaction dataset
 - Load raw transaction data into Microsoft SQL Server
@@ -21,22 +31,22 @@ The implementation follows enterprise data warehousing best practices using **Mi
 
 ---
 
-## Module Structure
+## 📂 Module Structure
 
 | Folder | Description |
 |---------|-------------|
-| **01_Dataset** | Dataset description, source information, and data loading scripts. |
-| **02_SQL_Scripts** | SQL scripts for database creation, staging, profiling, star schema implementation, indexing, and validation. |
-| **03_Star_Schema** | Star Schema documentation, dimensional model explanation, and schema diagrams. |
-| **04_ER_Diagram** | Entity Relationship (ER) diagrams illustrating database relationships and architecture. |
-| **05_Data_Dictionary** | Enterprise metadata documentation describing tables, columns, keys, and relationships. |
-| **06_Excel_Analysis** | Exploratory business analysis, data validation, Pivot Table analysis, and executive summaries using Microsoft Excel. |
+| **`01_Dataset`** | Dataset description, source information, and data loading scripts. |
+| **`02_SQL_Scripts`** | SQL scripts for database creation, staging, profiling, star schema implementation, indexing, and validation. |
+| **`03_Star_Schema`** | Star Schema documentation, dimensional model explanation, and schema diagrams. |
+| **`04_ER_Diagram`** | Entity Relationship (ER) diagrams illustrating database relationships and architecture. |
+| **`05_Data_Dictionary`** | Enterprise metadata documentation describing tables, columns, keys, and relationships. |
+| **`06_Excel_Analysis`** | Exploratory business analysis, data validation, Pivot Table analysis, and executive summaries using Microsoft Excel. |
 
 ---
 
-## Data Engineering Workflow
+## 🔄 Data Engineering Workflow
 
-```
+```text
 PaySim Dataset
         │
         ▼
@@ -66,7 +76,7 @@ SQL Analytics & Business Intelligence
 
 ---
 
-## Technology Stack
+## 🛠️ Technology Stack
 
 - Microsoft SQL Server
 - SQL Server Management Studio (SSMS)
@@ -78,7 +88,7 @@ SQL Analytics & Business Intelligence
 
 ---
 
-## Key Deliverables
+## 📦 Key Deliverables
 
 - Enterprise SQL Database
 - Star Schema Data Warehouse
@@ -90,7 +100,7 @@ SQL Analytics & Business Intelligence
 
 ---
 
-## Business Value
+## 💡 Business Value
 
 This module transforms raw payment transaction data into a structured analytical warehouse capable of supporting:
 
@@ -104,12 +114,12 @@ This module transforms raw payment transaction data into a structured analytical
 
 ---
 
-## Next Module
+## ⏭️ Next Module
 
 The analytical warehouse developed in this module serves as the foundation for **02_SQL_Analytics**, where advanced SQL queries are used to generate business insights, operational metrics, fraud analysis, and executive reports.
 
 ---
 
-## Conclusion
+## 📝 Conclusion
 
 The Data Engineering module establishes the core analytical infrastructure of the Enterprise FinTech Payment Intelligence Platform. By combining structured data warehousing, dimensional modeling, comprehensive documentation, and exploratory business analysis, it provides a scalable, enterprise-ready foundation for all subsequent analytics and business intelligence components of the project.
