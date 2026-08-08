@@ -1,13 +1,4 @@
-<div align="center">
-
-  # 💼 SQL Business Case Studies Results
-
-  ![Analytics](https://img.shields.io/badge/Analytics-Advanced_SQL_Case_Studies-0078D4?style=for-the-badge)
-  ![Phase](https://img.shields.io/badge/Phase-Business_Intelligence-success?style=for-the-badge)
-
-</div>
-
-<br>
+# 💼 SQL Business Case Studies Results
 
 ## 📖 Overview
 
@@ -23,7 +14,6 @@ The case studies simulate real-world FinTech business scenarios using advanced S
 
 **📈 SQL Output:**
 
-
 **🧠 Business Interpretation:** Day **17** recorded the highest number of fraudulent transactions (**320**) with fraud losses exceeding **63.69 million**, making it the highest fraud spike observed in the simulation period.
 
 **💡 Key Insight:** Fraud activity is not evenly distributed across time. Certain simulation days experience significantly higher fraud concentration.
@@ -37,7 +27,6 @@ The case studies simulate real-world FinTech business scenarios using advanced S
 **🎯 Business Problem:** Identify source accounts responsible for the highest fraud amounts.
 
 **📈 SQL Output:**
-
 
 **🧠 Business Interpretation:** Several source accounts generated fraudulent transactions of **10 million** each, resulting in identical fraud rankings.
 
@@ -53,7 +42,6 @@ The case studies simulate real-world FinTech business scenarios using advanced S
 
 **📈 SQL Output:**
 
-
 **🧠 Business Interpretation:** The highest-value account transferred over **92.45 million**, with several others exceeding **60 million**, indicating significant differences in customer payment behavior.
 
 **💡 Key Insight:** A relatively small group of customers contributes a disproportionately large share of total transaction value.
@@ -67,7 +55,6 @@ The case studies simulate real-world FinTech business scenarios using advanced S
 **🎯 Business Problem:** Identify highly active customer accounts based on transaction frequency.
 
 **📈 SQL Output:**
-
 
 **🧠 Business Interpretation:** Multiple source accounts share the highest activity level with **three transactions**, resulting in equal activity rankings.
 
@@ -87,8 +74,6 @@ The case studies simulate real-world FinTech business scenarios using advanced S
 
 Due to the large result set, the screenshot below displays only a representative sample (first 20–30 rows) of the complete query output.
 
-
-
 **🧠 Business Interpretation:** Fraud incidents are concentrated during specific periods of the day, particularly involving **TRANSFER** and **CASH_OUT** transactions.
 
 **💡 Key Insight:** Fraud hotspots occur only under particular combinations of transaction type and time period rather than being randomly distributed.
@@ -103,17 +88,15 @@ Due to the large result set, the screenshot below displays only a representative
 
 **📈 SQL Output:**
 
-**Result:** This query returned **6,353,303 records** (one row per source account).
+**Result:** This query returned **6,353,307 records** (one row per source account).
 
 Due to the large result set, the screenshot below displays only a representative sample (first 20 rows) of the complete query output.
-
-
 
 **🧠 Business Interpretation:** Most customer accounts fall into the **Low Activity** category because they perform only a small number of transactions.
 
 **💡 Key Insight:** The payment platform serves a very broad customer base where transaction activity is widely distributed.
 
-**✅ Business Recommendation:** Use activity segmentation to personalize customer engagement strategies and identify inactive, medium-value, and premium customers.
+**✅ Business Recommendation:** Use activity segmentation to personalize customer engagement strategies and identify low-, medium-, and high-activity customers.
 
 ---
 
@@ -122,7 +105,6 @@ Due to the large result set, the screenshot below displays only a representative
 **🎯 Business Problem:** Monitor cumulative fraud losses throughout the simulation period.
 
 **📈 SQL Output:**
-
 
 **🧠 Business Interpretation:** The cumulative fraud amount steadily increases throughout the simulation period, reaching approximately **12.06 billion** by the final day.
 
@@ -137,7 +119,6 @@ Due to the large result set, the screenshot below displays only a representative
 **🎯 Business Problem:** Rank transaction types according to fraud occurrence.
 
 **📈 SQL Output:**
-
 
 **🧠 Business Interpretation:** **CASH_OUT** transactions rank first with **4,116** fraud cases, followed closely by **TRANSFER** transactions with **4,097** fraud cases.
 
