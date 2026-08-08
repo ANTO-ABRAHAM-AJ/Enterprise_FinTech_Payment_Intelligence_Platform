@@ -1,1 +1,0 @@
-Star Schema Documentation

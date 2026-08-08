@@ -1,8 +1,15 @@
-# Excel Business Analysis
+<div align="center">
 
----
+  # 📊 Excel Business Analysis
 
-# Overview
+  ![Tool](https://img.shields.io/badge/Tool-Microsoft_Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)
+  ![Phase](https://img.shields.io/badge/Phase-Exploratory_Data_Analysis-0078D4?style=for-the-badge)
+
+</div>
+
+<br>
+
+## 📖 Overview
 
 This folder contains exploratory business analysis performed using **Microsoft Excel** prior to data warehousing and advanced analytics.
 
@@ -10,7 +17,7 @@ The analyses provide an initial understanding of transaction behavior, fraud pat
 
 ---
 
-# Objectives
+## 🎯 Objectives
 
 The Excel analysis was conducted to:
 
@@ -24,7 +31,7 @@ The Excel analysis was conducted to:
 
 ---
 
-# Files
+## 📁 Files
 
 | File | Description |
 |------|-------------|
@@ -34,7 +41,7 @@ The Excel analysis was conducted to:
 
 ---
 
-# Analysis Areas
+## 🔍 Analysis Areas
 
 The Excel workbooks cover the following analytical areas:
 
@@ -49,7 +56,7 @@ The Excel workbooks cover the following analytical areas:
 
 ---
 
-# Business Value
+## 💡 Business Value
 
 The Excel analyses helped identify important business patterns before building the SQL data warehouse.
 
@@ -64,7 +71,7 @@ Key outcomes include:
 
 ---
 
-# Technologies
+## 🛠️ Technologies
 
 - Microsoft Excel
 - Pivot Tables
@@ -74,7 +81,7 @@ Key outcomes include:
 
 ---
 
-# Integration with the Project
+## 🚀 Integration with the Project
 
 The insights generated from these Excel analyses support multiple stages of the Enterprise FinTech Payment Intelligence Platform, including:
 
@@ -88,6 +95,6 @@ The insights generated from these Excel analyses support multiple stages of the 
 
 ---
 
-# Summary
+## 📝 Summary
 
 The Excel workbooks provide the initial analytical foundation for the Enterprise FinTech Payment Intelligence Platform. Through exploratory analysis, data validation, Pivot Table reporting, and executive dashboards, they establish a clear understanding of transaction behavior and fraud patterns that supports the project's end-to-end analytics workflow.
