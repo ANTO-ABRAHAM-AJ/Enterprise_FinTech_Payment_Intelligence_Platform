@@ -101,7 +101,8 @@ Due to the large result set, the screenshot below displays only a representative
 **🎯 Business Objective:** Measure the average transaction value for each source account.
 
 **📈 SQL Output:**  
-![Average Transaction Value](images/account_kpi_06_average_transaction_value.png)
+![Average Transaction Value](images/account_kpi_06_average_transaction_value_by_source_account.png)
+
 
 **🧠 Business Interpretation:** Several accounts maintain exceptionally high average transaction values, indicating specialized payment behavior involving large-value transfers.
 
