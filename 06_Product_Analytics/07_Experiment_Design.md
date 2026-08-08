@@ -1,10 +1,18 @@
-# Experiment Design
+<div align="center">
 
-## Enterprise FinTech Payment Intelligence Platform
+  # 🧪 Experiment Design
+  ## Enterprise FinTech Payment Intelligence Platform
 
----
+  ![Strategy](https://img.shields.io/badge/Strategy-A%2FB%20Testing-blue?style=for-the-badge)
+  ![Framework](https://img.shields.io/badge/Framework-Experimentation-success?style=for-the-badge)
+  ![Focus](https://img.shields.io/badge/Focus-Risk%20Verification-orange?style=for-the-badge)
+  ![Role](https://img.shields.io/badge/Role-Product%20Manager-purple?style=for-the-badge)
 
-# Overview
+</div>
+
+<br>
+
+# 📖 Overview
 
 Experimentation enables product teams to validate new ideas before full-scale deployment. Rather than implementing product changes based solely on assumptions, controlled experiments help determine whether a proposed feature delivers measurable business value.
 
@@ -12,7 +20,7 @@ Since the PaySim dataset represents historical simulated transactions, this proj
 
 ---
 
-# Business Problem
+# ⚠️ Business Problem
 
 High-value transactions contribute disproportionately to fraud-related financial losses.
 
@@ -20,78 +28,69 @@ The current transaction workflow applies the same verification process to all tr
 
 ---
 
-# Proposed Product Feature
+# 💡 Proposed Product Feature
 
 ## Risk-Based Transaction Verification
 
 Instead of applying identical verification rules to every transaction, verification requirements are determined by the estimated fraud risk.
 
-### Verification Strategy
+### **Verification Strategy**
 
 | Risk Level | Verification Process |
-|------------|----------------------|
-| Low Risk | Standard Transaction Processing |
-| Medium Risk | Additional Risk Monitoring |
-| High Risk | Identity Verification or Manual Review |
+| :--- | :--- |
+| **Low Risk** | Standard Transaction Processing |
+| **Medium Risk** | Additional Risk Monitoring |
+| **High Risk** | Identity Verification or Manual Review |
 
 ---
 
-# Experiment Objective
+# 🎯 Experiment Objective
 
 Evaluate whether introducing risk-based transaction verification reduces fraud exposure while maintaining an efficient payment experience.
 
 ---
 
-# Hypothesis
+# 🔬 Hypothesis
 
-### Null Hypothesis (H₀)
-
+### **Null Hypothesis (H₀)**
 Risk-based transaction verification does not significantly improve fraud prevention compared to the existing verification process.
 
-### Alternative Hypothesis (H₁)
-
+### **Alternative Hypothesis (H₁)**
 Risk-based transaction verification reduces fraud exposure and improves overall payment platform security.
 
 ---
 
-# Experiment Design
+# 📐 Experiment Design
 
-## Control Group
-
+### **Control Group**
 - Existing transaction verification process
 - Standard verification applied to all transactions
 
----
-
-## Treatment Group
-
+### **Treatment Group**
 - Risk-based verification enabled
 - Additional verification only for high-risk transactions
 
 ---
 
-# Success Metrics
+# 📊 Success Metrics
 
 The experiment will be evaluated using the following business metrics.
 
-### Primary Metrics
-
+### **Primary Metrics**
 - Fraud Rate
 - Fraud Amount
 - High-Value Fraud Transactions
 
-### Secondary Metrics
-
+### **Secondary Metrics**
 - Total Fraud Transactions
 - Total Transaction Value at Risk
 - Percentage of High-Risk Transactions Reviewed
 
 ---
 
-# Decision Criteria
+# ⚖️ Decision Criteria
 
 The experiment will be considered successful if it demonstrates:
-
 - Lower Fraud Rate
 - Lower Fraud Amount
 - Improved detection of high-value fraudulent transactions
@@ -99,10 +98,9 @@ The experiment will be considered successful if it demonstrates:
 
 ---
 
-# Potential Risks
+# 🔴 Potential Risks
 
 Introducing additional verification may create several operational challenges.
-
 - Increased verification time
 - Higher manual review workload
 - False positives affecting legitimate customers
@@ -112,10 +110,9 @@ These risks should be monitored throughout the experiment before wider deploymen
 
 ---
 
-# Expected Business Outcome
+# 💎 Expected Business Outcome
 
 If successful, the proposed feature is expected to:
-
 - Reduce fraud-related financial losses
 - Improve fraud detection efficiency
 - Strengthen customer trust
@@ -124,26 +121,25 @@ If successful, the proposed feature is expected to:
 
 ---
 
-# Project Alignment
+# 🔄 Project Alignment
 
 | Project Phase | Contribution |
-|---------------|--------------|
-| Business Context | Defines the business challenge |
-| SQL Analytics | Measures fraud-related KPIs |
-| Advanced SQL | Supports analytical reporting |
-| Machine Learning | Predicts high-risk transactions |
-| Business Intelligence | Monitors experiment metrics |
-| Product Analytics | Designs and evaluates the experiment |
-| Business Case Studies | Validates business recommendations |
+| :--- | :--- |
+| **Business Context** | Defines the business challenge |
+| **SQL Analytics** | Measures fraud-related KPIs |
+| **Advanced SQL** | Supports analytical reporting |
+| **Machine Learning** | Predicts high-risk transactions |
+| **Business Intelligence** | Monitors experiment metrics |
+| **Product Analytics** | Designs and evaluates the experiment |
+| **Business Case Studies** | Validates business recommendations |
 
 ---
 
-# Limitations
+# 🚫 Limitations
 
 This experiment is conceptual.
 
 The PaySim dataset does not contain:
-
 - Customer feedback
 - Payment approval outcomes
 - User behavior
@@ -154,6 +150,6 @@ Therefore, no statistical A/B testing results are calculated within this project
 
 ---
 
-# Conclusion
+# 🏁 Conclusion
 
 This conceptual experiment demonstrates how product teams can validate fraud prevention initiatives before production deployment. By combining fraud analytics, machine learning insights, and structured experimentation principles, organizations can make evidence-based product decisions while balancing fraud prevention, operational efficiency, and customer experience.

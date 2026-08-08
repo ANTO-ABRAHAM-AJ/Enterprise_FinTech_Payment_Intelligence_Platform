@@ -1,15 +1,19 @@
-# Enterprise FinTech Payment Intelligence Platform
-## Phase 06 – Product Analytics
+<div align="center">
 
-![Product Analytics](https://img.shields.io/badge/Product_Analytics-Decision_Making-blue)
-![North Star](https://img.shields.io/badge/North_Star-Fraud_Loss_Prevention-success)
-![KPI Framework](https://img.shields.io/badge/KPI-Framework-orange)
-![Product Strategy](https://img.shields.io/badge/Product-Strategy-purple)
-![Status](https://img.shields.io/badge/Phase-Completed-brightgreen)
+  # 📈 Enterprise FinTech Payment Intelligence Platform
+  ## Phase 06 – Product Analytics
 
----
+  ![Product Analytics](https://img.shields.io/badge/Product_Analytics-Decision_Making-blue?style=for-the-badge)
+  ![North Star](https://img.shields.io/badge/North_Star-Fraud_Loss_Prevention-success?style=for-the-badge)
+  ![KPI Framework](https://img.shields.io/badge/KPI-Framework-orange?style=for-the-badge)
+  ![Product Strategy](https://img.shields.io/badge/Product-Strategy-purple?style=for-the-badge)
+  ![Status](https://img.shields.io/badge/Phase-Completed-brightgreen?style=for-the-badge)
 
-# Overview
+</div>
+
+<br>
+
+# 📖 Overview
 
 This phase focuses on transforming analytical findings into product strategy and business decisions.
 
@@ -19,9 +23,9 @@ The objective is to showcase product thinking by connecting fraud analytics with
 
 ---
 
-# Product Analytics Workflow
+# 🔄 Product Analytics Workflow
 
-```
+~~~text
 Business Problem
         │
         ▼
@@ -44,64 +48,55 @@ Experiment Design
         │
         ▼
 Business Impact Analysis
-```
+~~~
 
 ---
 
-# Deliverables
+# 📦 Deliverables
 
-## Business Problem
-
+## 🏢 Business Problem
 Defines the business challenge, project objectives, proposed solution, project scope, and expected business value.
 
 ---
 
-## North Star Metric
-
+## 🌟 North Star Metric
 Establishes **Fraud Loss Prevention** as the primary product success metric and aligns every project phase with a common business objective.
 
 ---
 
-## KPI Tree
-
+## 🌳 KPI Tree
 Breaks down the North Star Metric into measurable business and operational KPIs for monitoring payment platform performance.
 
 ---
 
-## Product Metrics
-
+## 📊 Product Metrics
 Defines the product health metrics used to evaluate payment activity, fraud exposure, operational efficiency, and transaction risk.
 
 ---
 
-## Product Recommendations
-
+## 💡 Product Recommendations
 Transforms analytical findings into actionable recommendations that improve fraud prevention, operational efficiency, and product performance.
 
 ---
 
-## Feature Prioritization
-
+## 🚀 Feature Prioritization
 Uses an Impact vs. Effort framework to prioritize product initiatives based on business value and implementation complexity.
 
 ---
 
-## Experiment Design
-
+## 🧪 Experiment Design
 Presents a conceptual product experiment for evaluating a risk-based transaction verification feature before production deployment.
 
 ---
 
-## Business Impact Analysis
-
+## 💥 Business Impact Analysis
 Evaluates how the complete analytical platform contributes to fraud prevention, executive reporting, operational efficiency, and product decision-making.
 
 ---
 
-# Business Value
+# 💎 Business Value
 
 This phase demonstrates how enterprise analytics can support product strategy by:
-
 - Defining measurable business objectives.
 - Establishing a product KPI framework.
 - Converting analytical insights into business recommendations.
@@ -111,7 +106,7 @@ This phase demonstrates how enterprise analytics can support product strategy by
 
 ---
 
-# Technologies & Concepts
+# 🛠️ Technologies & Concepts
 
 - Product Analytics
 - Product Strategy
@@ -125,10 +120,10 @@ This phase demonstrates how enterprise analytics can support product strategy by
 
 ---
 
-# Folder Structure
+# 📂 Folder Structure
 
-```text
-06_Product_Analytics
+~~~text
+06_Product_Analytics/
 │
 ├── README.md
 ├── 01_Business_Problem.md
@@ -141,11 +136,11 @@ This phase demonstrates how enterprise analytics can support product strategy by
 ├── 08_Business_Impact_Analysis.md
 │
 └── images/
-```
+~~~
 
 ---
 
-# Business Outcome
+# 🎯 Business Outcome
 
 The Product Analytics phase bridges the gap between technical implementation and business strategy.
 
@@ -153,6 +148,6 @@ By combining enterprise analytics, fraud monitoring, product metrics, feature pr
 
 ---
 
-# Conclusion
+# 🏁 Conclusion
 
 The Product Analytics phase completes the business decision-making layer of the Enterprise FinTech Payment Intelligence Platform. It illustrates how organizations can convert analytical findings into measurable product improvements, strategic initiatives, and long-term business value while maintaining alignment with the project's North Star Metric: **Fraud Loss Prevention**.
