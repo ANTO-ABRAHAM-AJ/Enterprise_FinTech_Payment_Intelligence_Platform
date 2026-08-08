@@ -1,6 +1,18 @@
-# Customer Activity Segmentation
+<div align="center">
 
-## Executive Summary
+  # 🔍 Customer Activity Segmentation
+  ## Business Case Study 06
+
+  ![Case Study](https://img.shields.io/badge/Case_Study-Customer_Segmentation-blue?style=for-the-badge)
+  ![Focus](https://img.shields.io/badge/Focus-Activity_Analysis-success?style=for-the-badge)
+  ![Domain](https://img.shields.io/badge/Domain-FinTech%20Payments-orange?style=for-the-badge)
+  ![Role](https://img.shields.io/badge/Role-Business%20Analyst-purple?style=for-the-badge)
+
+</div>
+
+<br>
+
+# 📑 Executive Summary
 
 Customer activity segmentation categorizes accounts based on transaction frequency to better understand payment behavior and operational workload. Segmenting accounts enables organizations to prioritize monitoring efforts, allocate resources efficiently, and identify unusual activity patterns.
 
@@ -8,7 +20,7 @@ This investigation classifies source accounts into different activity levels usi
 
 ---
 
-# Business Problem
+# ⚠️ Business Problem
 
 Payment platforms process transactions from accounts with varying levels of activity.
 
@@ -16,7 +28,7 @@ The fraud operations team needs to identify highly active accounts that may requ
 
 ---
 
-# Background
+# 🏢 Background
 
 Not every customer interacts with the payment platform in the same way.
 
@@ -26,10 +38,9 @@ Understanding these activity patterns supports fraud monitoring, operational pla
 
 ---
 
-# Business Objective
+# 🎯 Business Objective
 
 The objectives of this investigation are to:
-
 - Segment accounts based on transaction frequency.
 - Identify high-activity accounts.
 - Understand customer activity distribution.
@@ -37,19 +48,18 @@ The objectives of this investigation are to:
 
 ---
 
-# SQL Investigation
+# 💻 SQL Investigation
 
 **Reference**
 
-```
-29_SQL_Business_Case_Studies.sql
+~~~text
+06_SQL_Business_Case_Studies.sql
 
 Case Study 6
 Customer Activity Segmentation
-```
+~~~
 
 The SQL analysis classified accounts into:
-
 - High Activity
 - Medium Activity
 - Low Activity
@@ -58,7 +68,7 @@ based on the total number of transactions performed by each source account.
 
 ---
 
-# Machine Learning Findings
+# 🤖 Machine Learning Findings
 
 Customer activity level can be incorporated as an additional feature for fraud prediction models.
 
@@ -66,10 +76,9 @@ When combined with transaction amount and fraud probability, activity segmentati
 
 ---
 
-# Product Analytics Findings
+# 📊 Product Analytics Findings
 
 Relevant KPIs include:
-
 - Transaction Frequency
 - Total Transactions
 - High Activity Accounts
@@ -79,12 +88,11 @@ These KPIs help product teams understand platform usage and operational workload
 
 ---
 
-# Root Cause Analysis
+# 🔍 Root Cause Analysis
 
 The investigation shows that customer activity is unevenly distributed across the platform.
 
 Possible contributing factors include:
-
 - Different customer usage patterns.
 - Business versus personal payment behavior.
 - Automated payment activity.
@@ -94,10 +102,9 @@ High activity alone should not be interpreted as suspicious behavior but should 
 
 ---
 
-# Business Recommendation
+# 💡 Business Recommendation
 
 Recommended actions include:
-
 - Continuously monitor high-activity accounts.
 - Combine activity segmentation with fraud risk scores.
 - Prioritize monitoring for high-activity accounts processing unusually large transactions.
@@ -106,10 +113,9 @@ Recommended actions include:
 
 ---
 
-# Expected Business Impact
+# 💎 Expected Business Impact
 
 Implementing these recommendations can:
-
 - Improve operational visibility.
 - Support fraud prevention.
 - Enhance resource allocation.
@@ -118,25 +124,24 @@ Implementing these recommendations can:
 
 ---
 
-# Project Alignment
+# 🔄 Project Alignment
 
 This investigation integrates multiple project phases.
 
 | Phase | Contribution |
-|--------|--------------|
-| SQL Analytics | Customer activity segmentation |
-| Machine Learning | Risk prediction |
-| Product Analytics | Business recommendations |
-| Power BI | Activity distribution dashboards |
+| :--- | :--- |
+| **SQL Analytics** | Customer activity segmentation |
+| **Machine Learning** | Risk prediction |
+| **Product Analytics** | Business recommendations |
+| **Power BI** | Activity distribution dashboards |
 
 ---
 
-# Limitations
+# 🚫 Limitations
 
 This investigation is based on the simulated PaySim dataset.
 
 The dataset does not include:
-
 - Customer demographics.
 - Customer lifecycle information.
 - Account type.
@@ -147,6 +152,6 @@ Therefore, segmentation is based solely on transaction frequency.
 
 ---
 
-# Conclusion
+# 🏁 Conclusion
 
 The Customer Activity Segmentation investigation demonstrates how transaction frequency can be used to classify accounts into meaningful operational groups. Integrating SQL analytics, machine learning, and product analytics enables organizations to better understand platform usage, optimize monitoring strategies, and support data-driven business decisions.

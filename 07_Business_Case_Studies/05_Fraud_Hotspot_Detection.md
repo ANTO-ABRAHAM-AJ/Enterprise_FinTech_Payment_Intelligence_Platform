@@ -1,6 +1,18 @@
-# Fraud Hotspot Detection
+<div align="center">
 
-## Executive Summary
+  # 🔍 Fraud Hotspot Detection
+  ## Business Case Study 05
+
+  ![Case Study](https://img.shields.io/badge/Case_Study-Fraud_Hotspot-blue?style=for-the-badge)
+  ![Focus](https://img.shields.io/badge/Focus-Pattern_Detection-success?style=for-the-badge)
+  ![Domain](https://img.shields.io/badge/Domain-FinTech%20Payments-orange?style=for-the-badge)
+  ![Role](https://img.shields.io/badge/Role-Business%20Analyst-purple?style=for-the-badge)
+
+</div>
+
+<br>
+
+# 📑 Executive Summary
 
 Fraudulent transactions are not always evenly distributed across all transaction types and time periods. Identifying fraud hotspots enables organizations to allocate monitoring resources more effectively and strengthen fraud prevention strategies.
 
@@ -8,7 +20,7 @@ This investigation analyzes the relationship between transaction type, day, and 
 
 ---
 
-# Business Problem
+# ⚠️ Business Problem
 
 The fraud operations team needs to identify where fraudulent transactions are most concentrated.
 
@@ -16,7 +28,7 @@ Understanding fraud hotspots helps improve monitoring efficiency and supports pr
 
 ---
 
-# Background
+# 🏢 Background
 
 Digital payment platforms process multiple transaction types throughout the day. Certain combinations of transaction type and operational periods may exhibit higher fraud risk than others.
 
@@ -24,10 +36,9 @@ Analyzing these patterns enables organizations to prioritize fraud monitoring an
 
 ---
 
-# Business Objective
+# 🎯 Business Objective
 
 The objectives of this investigation are to:
-
 - Identify fraud hotspots across transaction types.
 - Analyze fraud distribution by day.
 - Analyze fraud distribution by period of day.
@@ -35,19 +46,18 @@ The objectives of this investigation are to:
 
 ---
 
-# SQL Investigation
+# 💻 SQL Investigation
 
 **Reference**
 
-```
+~~~text
 29_SQL_Business_Case_Studies.sql
 
 Case Study 5
 Fraud Hotspot Detection
-```
+~~~
 
 The SQL analysis calculated:
-
 - Fraud Transactions by Day
 - Fraud Transactions by Period of Day
 - Fraud Transactions by Transaction Type
@@ -56,7 +66,7 @@ The investigation identified combinations with the highest fraud concentration.
 
 ---
 
-# Machine Learning Findings
+# 🤖 Machine Learning Findings
 
 Machine learning models can prioritize transactions originating from identified fraud hotspots for additional review.
 
@@ -64,10 +74,9 @@ Combining hotspot detection with fraud prediction improves fraud prevention effi
 
 ---
 
-# Product Analytics Findings
+# 📊 Product Analytics Findings
 
 Relevant KPIs include:
-
 - Fraud Rate
 - Fraud Transactions
 - Fraud Amount
@@ -78,12 +87,11 @@ These KPIs help monitor changing fraud patterns over time.
 
 ---
 
-# Root Cause Analysis
+# 🔍 Root Cause Analysis
 
 The investigation indicates that fraud is concentrated within specific transaction types and operational periods rather than being uniformly distributed.
 
 Possible contributing factors include:
-
 - High transaction volume during peak periods.
 - Transaction types associated with increased fraud exposure.
 - Operational workload during busy periods.
@@ -91,10 +99,9 @@ Possible contributing factors include:
 
 ---
 
-# Business Recommendation
+# 💡 Business Recommendation
 
 Recommended actions include:
-
 - Increase fraud monitoring during identified hotspot periods.
 - Allocate additional fraud investigation resources during high-risk operational windows.
 - Apply enhanced machine learning risk scoring to hotspot transactions.
@@ -103,10 +110,9 @@ Recommended actions include:
 
 ---
 
-# Expected Business Impact
+# 💎 Expected Business Impact
 
 Implementing these recommendations can:
-
 - Improve fraud detection efficiency.
 - Reduce financial losses.
 - Optimize fraud investigation resources.
@@ -115,25 +121,24 @@ Implementing these recommendations can:
 
 ---
 
-# Project Alignment
+# 🔄 Project Alignment
 
 This investigation integrates multiple project phases.
 
 | Phase | Contribution |
-|--------|--------------|
-| SQL Analytics | Hotspot identification |
-| Machine Learning | Fraud prediction |
-| Product Analytics | Business recommendations |
-| Power BI | Fraud hotspot dashboards |
+| :--- | :--- |
+| **SQL Analytics** | Hotspot identification |
+| **Machine Learning** | Fraud prediction |
+| **Product Analytics** | Business recommendations |
+| **Power BI** | Fraud hotspot dashboards |
 
 ---
 
-# Limitations
+# 🚫 Limitations
 
 This investigation is based on the simulated PaySim dataset.
 
 The dataset does not include:
-
 - Geographic information.
 - Merchant locations.
 - Customer demographics.
@@ -144,6 +149,6 @@ Therefore, fraud hotspots are identified only from transaction behavior availabl
 
 ---
 
-# Conclusion
+# 🏁 Conclusion
 
 The Fraud Hotspot Detection investigation demonstrates how combining transaction type and time-based analysis helps organizations identify periods of elevated fraud risk. Integrating SQL analytics, machine learning, and business intelligence enables proactive fraud monitoring and supports data-driven operational decisions.

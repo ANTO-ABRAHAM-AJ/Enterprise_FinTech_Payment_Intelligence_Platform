@@ -1,6 +1,18 @@
-# Fraud Spike Investigation
+<div align="center">
 
-## Executive Summary
+  # 🔍 Fraud Spike Investigation
+  ## Business Case Study 01
+
+  ![Case Study](https://img.shields.io/badge/Case_Study-Fraud_Spike-blue?style=for-the-badge)
+  ![Focus](https://img.shields.io/badge/Focus-Root_Cause_Analysis-success?style=for-the-badge)
+  ![Domain](https://img.shields.io/badge/Domain-FinTech%20Payments-orange?style=for-the-badge)
+  ![Role](https://img.shields.io/badge/Role-Business%20Analyst-purple?style=for-the-badge)
+
+</div>
+
+<br>
+
+# 📑 Executive Summary
 
 A sudden increase in fraudulent transactions can expose payment platforms to significant financial losses and operational risks. Early identification of fraud spikes enables organizations to respond quickly and strengthen fraud prevention strategies.
 
@@ -8,7 +20,7 @@ This investigation analyzes fraud activity within the PaySim dataset to identify
 
 ---
 
-# Business Problem
+# ⚠️ Business Problem
 
 The fraud monitoring team observed an increase in suspicious transaction activity.
 
@@ -16,7 +28,7 @@ The objective of this investigation is to identify when fraud activity was highe
 
 ---
 
-# Background
+# 🏢 Background
 
 Digital payment platforms process millions of transactions daily. Fraud patterns often vary across time, transaction types, and customer behavior.
 
@@ -24,10 +36,9 @@ Understanding when fraud spikes occur enables better allocation of monitoring re
 
 ---
 
-# Business Objective
+# 🎯 Business Objective
 
 The investigation aims to:
-
 - Identify the day with the highest number of fraudulent transactions.
 - Quantify the associated fraud amount.
 - Assess the operational impact.
@@ -35,19 +46,18 @@ The investigation aims to:
 
 ---
 
-# SQL Investigation
+# 💻 SQL Investigation
 
 **Reference**
 
-```
-29_SQL_Business_Case_Studies.sql
+~~~text
+06_SQL_Business_Case_Studies.sql
 
 Case Study 1
 Fraud Spike Investigation
-```
+~~~
 
 The SQL analysis calculated:
-
 - Fraud Transactions by Day
 - Total Fraud Amount by Day
 
@@ -55,7 +65,7 @@ The results identified the day with the highest concentration of fraudulent acti
 
 ---
 
-# Machine Learning Findings
+# 🤖 Machine Learning Findings
 
 The fraud prediction model identified fraudulent transactions using historical transaction patterns.
 
@@ -63,10 +73,9 @@ Machine learning can assist fraud analysts by prioritizing high-risk transaction
 
 ---
 
-# Product Analytics Findings
+# 📊 Product Analytics Findings
 
 Relevant KPIs include:
-
 - Fraud Rate
 - Fraud Transactions
 - Fraud Amount
@@ -76,12 +85,11 @@ These KPIs help product teams continuously monitor fraud performance.
 
 ---
 
-# Root Cause Analysis
+# 🔍 Root Cause Analysis
 
 The investigation suggests that fraud activity is concentrated during specific operational periods rather than being uniformly distributed.
 
 Potential contributing factors include:
-
 - Increased transaction volume.
 - High-value transfers.
 - Transaction type characteristics.
@@ -89,10 +97,9 @@ Potential contributing factors include:
 
 ---
 
-# Business Recommendation
+# 💡 Business Recommendation
 
 Recommended actions include:
-
 - Increase fraud monitoring during high-risk periods.
 - Prioritize investigation of high-value transactions.
 - Deploy machine learning risk scoring for suspicious payments.
@@ -101,10 +108,9 @@ Recommended actions include:
 
 ---
 
-# Expected Business Impact
+# 💎 Expected Business Impact
 
 Implementing these recommendations can:
-
 - Reduce fraud losses.
 - Improve fraud detection efficiency.
 - Strengthen operational monitoring.
@@ -113,25 +119,24 @@ Implementing these recommendations can:
 
 ---
 
-# Project Alignment
+# 🔄 Project Alignment
 
 This investigation combines results from multiple project phases.
 
 | Phase | Contribution |
-|--------|--------------|
-| SQL Analytics | Fraud trend analysis |
-| Machine Learning | Fraud prediction |
-| Product Analytics | Business recommendations |
-| Power BI | Fraud monitoring dashboards |
+| :--- | :--- |
+| **SQL Analytics** | Fraud trend analysis |
+| **Machine Learning** | Fraud prediction |
+| **Product Analytics** | Business recommendations |
+| **Power BI** | Fraud monitoring dashboards |
 
 ---
 
-# Limitations
+# 🚫 Limitations
 
 This investigation is based on the simulated PaySim dataset.
 
 The dataset does not contain:
-
 - Real customer identities.
 - Device information.
 - Geographic location.
@@ -142,6 +147,6 @@ Therefore, conclusions are limited to the available transaction data.
 
 ---
 
-# Conclusion
+# 🏁 Conclusion
 
 The Fraud Spike Investigation demonstrates how SQL analytics, machine learning, and product analytics can be combined to identify periods of elevated fraud risk. The findings support proactive fraud monitoring and provide actionable recommendations that strengthen fraud prevention strategies within modern fintech platforms.

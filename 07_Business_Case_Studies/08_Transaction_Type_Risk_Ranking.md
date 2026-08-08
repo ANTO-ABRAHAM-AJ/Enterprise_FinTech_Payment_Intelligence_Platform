@@ -1,6 +1,18 @@
-# Transaction Type Risk Ranking
+<div align="center">
 
-## Executive Summary
+  # 🔍 Transaction Type Risk Ranking
+  ## Business Case Study 08
+
+  ![Case Study](https://img.shields.io/badge/Case_Study-Risk_Ranking-blue?style=for-the-badge)
+  ![Focus](https://img.shields.io/badge/Focus-Transaction_Types-success?style=for-the-badge)
+  ![Domain](https://img.shields.io/badge/Domain-FinTech%20Payments-orange?style=for-the-badge)
+  ![Role](https://img.shields.io/badge/Role-Business%20Analyst-purple?style=for-the-badge)
+
+</div>
+
+<br>
+
+# 📑 Executive Summary
 
 Different transaction types carry different levels of fraud risk. Understanding which transaction types are most frequently associated with fraudulent activity enables payment platforms to prioritize monitoring, strengthen fraud prevention strategies, and allocate operational resources more effectively.
 
@@ -8,7 +20,7 @@ This investigation ranks transaction types based on fraud occurrence to identify
 
 ---
 
-# Business Problem
+# ⚠️ Business Problem
 
 The fraud operations team needs to determine which transaction types present the greatest fraud risk.
 
@@ -16,7 +28,7 @@ Identifying high-risk transaction types enables more effective fraud monitoring 
 
 ---
 
-# Background
+# 🏢 Background
 
 Modern payment platforms support multiple transaction types, each with unique operational characteristics and fraud exposure.
 
@@ -24,10 +36,9 @@ Rather than applying identical fraud monitoring across all transaction types, or
 
 ---
 
-# Business Objective
+# 🎯 Business Objective
 
 The objectives of this investigation are to:
-
 - Rank transaction types by fraud occurrence.
 - Identify high-risk transaction categories.
 - Support targeted fraud monitoring.
@@ -35,19 +46,18 @@ The objectives of this investigation are to:
 
 ---
 
-# SQL Investigation
+# 💻 SQL Investigation
 
 **Reference**
 
-```
-29_SQL_Business_Case_Studies.sql
+~~~text
+06_SQL_Business_Case_Studies.sql
 
 Case Study 8
 Transaction Type Risk Ranking
-```
+~~~
 
 The SQL analysis calculated:
-
 - Fraud Transactions by Transaction Type
 - Fraud Risk Ranking
 
@@ -55,7 +65,7 @@ using SQL Ranking Functions to identify payment types with the highest fraud con
 
 ---
 
-# Machine Learning Findings
+# 🤖 Machine Learning Findings
 
 Machine learning models recognize transaction type as an important predictive feature when identifying fraudulent transactions.
 
@@ -63,10 +73,9 @@ Combining transaction type with additional behavioral features improves fraud pr
 
 ---
 
-# Product Analytics Findings
+# 📊 Product Analytics Findings
 
 Relevant KPIs include:
-
 - Fraud Rate
 - Fraud Transactions
 - Transaction Type Distribution
@@ -77,12 +86,11 @@ These KPIs help product teams continuously monitor fraud exposure across differe
 
 ---
 
-# Root Cause Analysis
+# 🔍 Root Cause Analysis
 
 The investigation indicates that fraud is concentrated within specific transaction types rather than being evenly distributed across all payment methods.
 
 Possible contributing factors include:
-
 - Transaction characteristics.
 - Higher transaction values.
 - Operational usage patterns.
@@ -92,10 +100,9 @@ Further investigation should be performed before implementing permanent operatio
 
 ---
 
-# Business Recommendation
+# 💡 Business Recommendation
 
 Recommended actions include:
-
 - Apply enhanced fraud monitoring for high-risk transaction types.
 - Introduce adaptive fraud thresholds based on transaction type.
 - Prioritize machine learning risk scoring for high-risk payment categories.
@@ -104,10 +111,9 @@ Recommended actions include:
 
 ---
 
-# Expected Business Impact
+# 💎 Expected Business Impact
 
 Implementing these recommendations can:
-
 - Improve fraud detection accuracy.
 - Reduce financial losses.
 - Optimize fraud investigation resources.
@@ -116,25 +122,24 @@ Implementing these recommendations can:
 
 ---
 
-# Project Alignment
+# 🔄 Project Alignment
 
 This investigation integrates multiple project phases.
 
 | Project Phase | Contribution |
-|---------------|-------------|
-| SQL Analytics | Transaction type risk analysis |
-| Machine Learning | Fraud prediction |
-| Product Analytics | Product recommendations |
-| Power BI | Transaction type dashboards |
+| :--- | :--- |
+| **SQL Analytics** | Transaction type risk analysis |
+| **Machine Learning** | Fraud prediction |
+| **Product Analytics** | Product recommendations |
+| **Power BI** | Transaction type dashboards |
 
 ---
 
-# Limitations
+# 🚫 Limitations
 
 This investigation is based on the simulated PaySim dataset.
 
 The dataset does not include:
-
 - Merchant information.
 - Payment gateway responses.
 - Customer verification status.
@@ -145,6 +150,6 @@ Therefore, transaction type should be considered as one of several fraud indicat
 
 ---
 
-# Conclusion
+# 🏁 Conclusion
 
 The Transaction Type Risk Ranking investigation demonstrates how ranking payment methods by fraud occurrence helps organizations prioritize fraud prevention efforts. By integrating SQL analytics, machine learning, product analytics, and business intelligence, payment platforms can improve fraud monitoring, allocate resources efficiently, and support data-driven operational decisions.
